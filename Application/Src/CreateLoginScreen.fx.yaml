@@ -1,5 +1,5 @@
 CreateLoginScreen As screen:
-    Fill: =RGBA(26, 26, 33, 1)
+    Fill: =RGBA(31, 29, 29, 1)
     OnVisible: =
 
     backGround_1 As button:
@@ -28,7 +28,7 @@ CreateLoginScreen As screen:
         Text: ="Enviar"
         Width: =236
         X: =207
-        Y: =882
+        Y: =862
         ZIndex: =3
 
     messageLabel As label:

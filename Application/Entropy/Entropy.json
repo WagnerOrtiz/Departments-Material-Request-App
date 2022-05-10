@@ -27,7 +27,7 @@
     "passwordInput_1": 23
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "05/10/2022 15:36:36",
+  "HeaderLastSavedDateTimeUTC": "05/10/2022 15:39:00",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -109,9 +109,9 @@
       "group": 1,
       "htmlViewer": 2,
       "image": 7,
-      "label": 4,
+      "label": 5,
       "screen": 2,
-      "text": 4
+      "text": 5
     },
     "DeserializationLoadTime": 0.6955606,
     "ErrorCount": 0
