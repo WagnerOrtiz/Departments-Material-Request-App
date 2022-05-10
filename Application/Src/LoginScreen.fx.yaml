@@ -6,7 +6,7 @@ LoginScreen As screen:
         DisabledBorderColor: =RGBA(56, 52, 52, 1)
         DisabledFill: =RGBA(56, 52, 52, 1)
         Fill: =RGBA(135, 127, 127, 1)
-        Height: =737
+        Height: =777
         HoverBorderColor: =RGBA(56, 52, 52, 1)
         HoverFill: =RGBA(56, 52, 52, 1)
         PressedFill: =RGBA(56, 52, 52, 1)
@@ -14,37 +14,22 @@ LoginScreen As screen:
         Text: =""
         Width: =505
         X: =68
-        Y: =171
+        Y: =161
         ZIndex: =1
-
-    emailInput As text:
-        Color: =RGBA(56, 52, 52, 1)
-        Default: =""
-        Height: =72
-        HintText: ="Digite seu e-mail"
-        RadiusBottomLeft: =10
-        RadiusBottomRight: =10
-        RadiusTopLeft: =10
-        RadiusTopRight: =10
-        Size: =18
-        Width: =430
-        X: =110
-        Y: =339
-        ZIndex: =2
 
     loginButton As button:
         BorderColor: =RGBA(109, 49, 162, 1)
         DisabledFill: =RGBA(109, 49, 162, 1)
         Fill: =RGBA(109, 49, 162, 1)
-        Height: =53
+        Height: =67
         HoverFill: =RGBA(109, 49, 170, 1)
         PressedFill: =RGBA(109, 49, 162, 1)
         Size: =24
         Text: ="Entrar"
         Width: =236
         X: =216
-        Y: =698
-        ZIndex: =4
+        Y: =718
+        ZIndex: =3
 
     HtmlText1 As htmlViewer:
         Height: =48
@@ -52,8 +37,27 @@ LoginScreen As screen:
         Size: =20
         Width: =463
         X: =98
-        Y: =841
-        ZIndex: =5
+        Y: =851
+        ZIndex: =4
+
+    Label1_1 As label:
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Height: =70
+        Size: =18
+        Text: ="Senha"
+        Width: =430
+        X: =110
+        Y: =470
+        ZIndex: =8
+
+    Label1_2 As label:
+        Height: =70
+        Size: =18
+        Text: ="E-mail"
+        Width: =430
+        X: =110
+        Y: =301
+        ZIndex: =9
 
     passwordBox As group:
         Height: =5
@@ -63,8 +67,8 @@ LoginScreen As screen:
         ZIndex: =9
 
         passwordInput As text:
+            BorderThickness: =0
             Clear: =true
-            Color: =RGBA(56, 52, 52, 1)
             Default: =""
             DisplayMode: =
             Height: =72
@@ -78,8 +82,8 @@ LoginScreen As screen:
             Size: =18
             Width: =430
             X: =110
-            Y: =506
-            ZIndex: =3
+            Y: =526
+            ZIndex: =2
 
         closedEye As image:
             Height: =40
@@ -88,8 +92,8 @@ LoginScreen As screen:
             Visible: =!passwordMode
             Width: =35
             X: =440
-            Y: =522
-            ZIndex: =6
+            Y: =542
+            ZIndex: =5
 
         eraser As image:
             Height: =31
@@ -97,8 +101,8 @@ LoginScreen As screen:
             OnSelect: =Reset(passwordInput)
             Width: =31
             X: =493
-            Y: =526
-            ZIndex: =7
+            Y: =546
+            ZIndex: =6
 
         openEye As image:
             Height: =35
@@ -107,34 +111,33 @@ LoginScreen As screen:
             Visible: =passwordMode
             Width: =35
             X: =440
-            Y: =525
-            ZIndex: =8
-
-    Label1_1 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =70
-        Size: =18
-        Text: ="Senha"
-        Width: =430
-        X: =110
-        Y: =450
-        ZIndex: =10
-
-    Label1_2 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =70
-        Size: =18
-        Text: ="E-mail"
-        Width: =430
-        X: =110
-        Y: =281
-        ZIndex: =11
+            Y: =545
+            ZIndex: =7
 
     Image1 As image:
         Height: =140
         Image: ='P LOGO'
         Width: =152
         X: =258
-        Y: =100
-        ZIndex: =12
+        Y: =90
+        ZIndex: =10
+
+    emailInput As text:
+        BorderThickness: =0
+        Default: =""
+        DisabledBorderColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Height: =72
+        HintText: ="Digite seu e-mail"
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Size: =18
+        Width: =430
+        X: =110
+        Y: =359
+        ZIndex: =11
 
