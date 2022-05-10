@@ -1,5 +1,5 @@
 CreateLoginScreen As screen:
-    Fill: =RGBA(31, 29, 29, 1)
+    Fill: =If(dark, RGBA(31, 29, 29, 1), White)
     OnVisible: =
 
     backGround_1 As button:

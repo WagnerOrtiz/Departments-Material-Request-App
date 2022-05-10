@@ -1,5 +1,5 @@
 LoginScreen As screen:
-    Fill: =RGBA(31, 29, 29, 1)
+    Fill: =If(dark, RGBA(31, 29, 29, 1), White)
     OnVisible: =
 
     backGround As button:
@@ -15,7 +15,7 @@ LoginScreen As screen:
         Text: =""
         Width: =505
         X: =68
-        Y: =161
+        Y: =174
         ZIndex: =1
 
     loginButton As button:
@@ -26,12 +26,12 @@ LoginScreen As screen:
         HoverFill: =RGBA(109, 49, 170, 1)
         OnSelect: |-
             =If(
-                IsMatch(Lower(emailInput.Text),Email),                                              // Checa se é um email
+                IsMatch(Lower(emailInput.Text),Email),                                          // Checa se é um email
                 If(
                     emailInput.Text = LookUp(Usuarios, emailInput.Text = Email,Email),          // Checa se o email está cadastrado
                     If(
                         LookUp(Usuarios, emailInput.Text = Email,Senha) = passwordInput.Text,   // Checa se a senha está correta
-                        Set(login, "ENTROU"),
+                        Navigate(Requisicoes,ScreenTransition.CoverRight),
                         Set(login, "Senha incorreta")
                     ),
                     Set(login, "E-mail não cadastrado")
@@ -53,10 +53,10 @@ LoginScreen As screen:
         Size: =20
         Width: =463
         X: =98
-        Y: =851
+        Y: =864
         ZIndex: =4
 
-    Label1_1 As label:
+    passwordLabel As label:
         DisabledColor: =RGBA(0, 0, 0, 1)
         Height: =70
         Size: =18
@@ -66,7 +66,7 @@ LoginScreen As screen:
         Y: =470
         ZIndex: =8
 
-    Label1_2 As label:
+    emailLabel2 As label:
         Height: =70
         Size: =18
         Text: ="E-mail"
@@ -133,7 +133,7 @@ LoginScreen As screen:
             Y: =545
             ZIndex: =7
 
-    Image1 As image:
+    Logotipo As image:
         Height: =140
         Image: ='P LOGO'
         Width: =152
@@ -161,12 +161,24 @@ LoginScreen As screen:
         Y: =359
         ZIndex: =11
 
-    Label2 As label:
+    errorLabel As label:
+        Align: =Align.Center
+        Color: =RGBA(184, 0, 0, 1)
         Height: =70
-        Size: =21
+        Size: =15
         Text: =login
-        Width: =340
-        X: =300
-        Y: =231
+        Visible: =If(login<>Blank(),true, false)
+        Width: =505
+        X: =68
+        Y: =658
         ZIndex: =12
+
+    Toggle1 As toggleSwitch:
+        FalseText: ="Switch on"
+        OnChange: =Set(dark, !dark)
+        TrueText: ="Switch off"
+        Width: =148
+        X: =279
+        Y: =1070
+        ZIndex: =14
 

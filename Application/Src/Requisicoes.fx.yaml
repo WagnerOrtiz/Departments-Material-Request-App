@@ -1,0 +1,53 @@
+Requisicoes As screen:
+    Fill: =If(dark, RGBA(31, 29, 29, 1), White)
+    OnVisible: =
+
+    backGround_2 As button:
+        DisabledBorderColor: =RGBA(56, 52, 52, 1)
+        DisabledFill: =RGBA(56, 52, 52, 1)
+        Fill: =RGBA(135, 127, 127, 1)
+        Height: =122
+        HoverBorderColor: =RGBA(56, 52, 52, 1)
+        HoverFill: =RGBA(56, 52, 52, 1)
+        PressedFill: =RGBA(56, 52, 52, 1)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: =""
+        Width: =640
+        ZIndex: =1
+
+    loginButton_2 As button:
+        BorderColor: =RGBA(109, 49, 162, 1)
+        DisabledFill: =RGBA(109, 49, 162, 1)
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =67
+        HoverFill: =RGBA(109, 49, 170, 1)
+        PressedFill: =RGBA(109, 49, 162, 1)
+        Size: =24
+        Text: ="Enviar"
+        Width: =236
+        X: =207
+        Y: =862
+        ZIndex: =3
+
+    Icon1_1 As icon.CheckBadge:
+        Color: =RGBA(109, 49, 162, 1)
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        X: =22
+        Y: =31
+        ZIndex: =12
+
+    Label4 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =23
+        Text: ="Olá, " & LookUp(Usuarios,Email = emailInput.Text, Nome)
+        Width: =483
+        X: =125
+        Y: =28
+        ZIndex: =13
+

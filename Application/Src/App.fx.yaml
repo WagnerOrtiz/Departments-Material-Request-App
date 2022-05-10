@@ -1,5 +1,5 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =Set(passwordMode, true)
+    OnStart: =Set(passwordMode, true); Set(dark, true)
     StartScreen: =
 
