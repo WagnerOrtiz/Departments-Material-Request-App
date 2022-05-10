@@ -1,7 +1,8 @@
 LoginScreen As screen:
     Fill: =RGBA(204, 204, 204, 1)
+    OnVisible: =
 
-    Button1 As button:
+    backGround As button:
         DisabledBorderColor: =RGBA(56, 52, 52, 1)
         DisabledFill: =RGBA(56, 52, 52, 1)
         Fill: =RGBA(56, 52, 52, 1)
@@ -16,7 +17,7 @@ LoginScreen As screen:
         Y: =202
         ZIndex: =1
 
-    TextInput1 As text:
+    emailInput As text:
         Color: =RGBA(56, 52, 52, 1)
         Default: =""
         Height: =72
@@ -31,13 +32,14 @@ LoginScreen As screen:
         Y: =359
         ZIndex: =2
 
-    TextInput1_1 As text:
+    passwordInput As text:
         Clear: =true
         Color: =RGBA(56, 52, 52, 1)
         Default: =""
+        DisplayMode: =
         Height: =72
         HintText: ="Senha"
-        Mode: =TextMode.Password
+        Mode: =If(passwordMode, Password, SingleLine)
         RadiusBottomLeft: =10
         RadiusBottomRight: =10
         RadiusTopLeft: =10
@@ -48,7 +50,7 @@ LoginScreen As screen:
         Y: =506
         ZIndex: =3
 
-    Button2 As button:
+    loginButton As button:
         BorderColor: =RGBA(109, 49, 162, 1)
         DisabledFill: =RGBA(109, 49, 162, 1)
         Fill: =RGBA(109, 49, 162, 1)
@@ -71,27 +73,29 @@ LoginScreen As screen:
         Y: =841
         ZIndex: =5
 
-    openEye As image:
-        Height: =40
-        Image: ='icons8-visível-48'
+    closedEye As image:
+        Height: =46
+        Image: ='icons8-eyelashes-2d-48'
         Width: =40
         X: =438
         Y: =519
         ZIndex: =6
 
-    closedEye As image:
-        Height: =46
-        Image: ='icons8-eyelashes-2d-48'
-        Width: =46
-        X: =435
-        Y: =519
-        ZIndex: =7
-
-    Image5 As image:
+    eraser As image:
         Height: =31
         Image: ='icons8-excluir-30'
+        OnSelect: =Reset(passwordInput)
         Width: =31
         X: =493
         Y: =526
+        ZIndex: =7
+
+    openEye As image:
+        Height: =40
+        Image: ='icons8-visível-48'
+        Visible: =!passwordMode
+        Width: =40
+        X: =438
+        Y: =522
         ZIndex: =8
 

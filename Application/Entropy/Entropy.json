@@ -2,18 +2,18 @@
   "ComponentIndexes": {},
   "ControlUniqueIds": {
     "App": 1,
-    "Button1": 4,
-    "Button2": 7,
+    "backGround": 4,
     "closedEye": 10,
+    "emailInput": 5,
+    "eraser": 13,
     "HtmlText1": 8,
-    "Image5": 13,
+    "loginButton": 7,
     "LoginScreen": 3,
     "openEye": 9,
-    "TextInput1": 5,
-    "TextInput1_1": 6
+    "passwordInput": 6
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "05/10/2022 14:31:38",
+  "HeaderLastSavedDateTimeUTC": "05/10/2022 14:59:29",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -41,15 +41,15 @@
   },
   "PublishOrderIndices": {
     "App": 0,
-    "Button1": 0,
-    "Button2": 6,
+    "backGround": 0,
     "closedEye": 3,
+    "emailInput": 1,
+    "eraser": 5,
     "HtmlText1": 7,
-    "Image5": 5,
+    "loginButton": 6,
     "LoginScreen": 0,
     "openEye": 4,
-    "TextInput1": 1,
-    "TextInput1_1": 2
+    "passwordInput": 2
   },
   "ResourcesJsonIndices": {
     "Image-icons8-excluir-30": 3,
