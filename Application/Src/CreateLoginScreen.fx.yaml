@@ -108,6 +108,7 @@ CreateLoginScreen As screen:
     Icon1 As icon.CheckBadge:
         Color: =RGBA(109, 49, 162, 1)
         Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
         X: =40
         Y: =40
         ZIndex: =12

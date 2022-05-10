@@ -4,12 +4,13 @@ LoginScreen As screen:
 
     backGround As button:
         DisabledBorderColor: =RGBA(56, 52, 52, 1)
-        DisabledFill: =RGBA(56, 52, 52, 1)
+        DisabledFill: =RGBA(135, 127, 127, 1)
         Fill: =RGBA(135, 127, 127, 1)
         Height: =777
         HoverBorderColor: =RGBA(56, 52, 52, 1)
-        HoverFill: =RGBA(56, 52, 52, 1)
-        PressedFill: =RGBA(56, 52, 52, 1)
+        HoverFill: =RGBA(135, 127, 127, 1)
+        PressedBorderColor: =RGBA(56, 52, 52, 1)
+        PressedFill: =RGBA(135, 127, 127, 1)
         Size: =24
         Text: =""
         Width: =505
@@ -34,6 +35,7 @@ LoginScreen As screen:
     HtmlText1 As htmlViewer:
         Height: =48
         HtmlText: ="Ainda não tem acesso? Clique <b><font color=6D31A2>aqui</font></b>."
+        OnSelect: =Navigate(CreateLoginScreen,ScreenTransition.CoverRight)
         Size: =20
         Width: =463
         X: =98
@@ -70,9 +72,12 @@ LoginScreen As screen:
             BorderThickness: =0
             Clear: =true
             Default: =""
+            DisabledFill: =RGBA(255, 255, 255, 1)
             DisplayMode: =
+            FocusedBorderThickness: =1
             Height: =72
             HintText: ="Digite sua senha"
+            HoverFill: =RGBA(255, 255, 255, 1)
             MaxLength: =25
             Mode: =If(passwordMode, Password, SingleLine)
             RadiusBottomLeft: =10
@@ -127,6 +132,7 @@ LoginScreen As screen:
         Default: =""
         DisabledBorderColor: =RGBA(255, 255, 255, 1)
         DisabledFill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =1
         Height: =72
         HintText: ="Digite seu e-mail"
         HoverFill: =RGBA(255, 255, 255, 1)
