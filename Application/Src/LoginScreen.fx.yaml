@@ -24,6 +24,20 @@ LoginScreen As screen:
         Fill: =RGBA(109, 49, 162, 1)
         Height: =67
         HoverFill: =RGBA(109, 49, 170, 1)
+        OnSelect: |-
+            =If(
+                IsMatch(Lower(emailInput.Text),Email),                                              // Checa se é um email
+                If(
+                    emailInput.Text = LookUp(Usuarios, emailInput.Text = Email,Email),          // Checa se o email está cadastrado
+                    If(
+                        LookUp(Usuarios, emailInput.Text = Email,Senha) = passwordInput.Text,   // Checa se a senha está correta
+                        Set(login, "ENTROU"),
+                        Set(login, "Senha incorreta")
+                    ),
+                    Set(login, "E-mail não cadastrado")
+                ),
+                Set(login, "email invalido")
+            )
         PressedFill: =RGBA(109, 49, 162, 1)
         Size: =24
         Text: ="Entrar"
@@ -146,4 +160,13 @@ LoginScreen As screen:
         X: =110
         Y: =359
         ZIndex: =11
+
+    Label2 As label:
+        Height: =70
+        Size: =21
+        Text: =login
+        Width: =340
+        X: =300
+        Y: =231
+        ZIndex: =12
 

@@ -1,1 +1,27 @@
-{}
+{
+  "7ae2caa0-b914-4004-8d55-71829d5878e0": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1568/1.0.1568.2757/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://n0pc.sharepoint.com/sites/RequisicaoMateriais": {
+        "dataSources": {
+          "Usuarios": {
+            "tableName": "77629c20-1604-4a02-893b-3c3b7b2d6c88"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Usuarios"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "7ae2caa0-b914-4004-8d55-71829d5878e0"
+  }
+}
