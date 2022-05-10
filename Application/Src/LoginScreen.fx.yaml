@@ -1,5 +1,5 @@
 LoginScreen As screen:
-    Fill: =RGBA(31, 29, 29, 1)
+    Fill: =RGBA(26, 26, 33, 1)
     OnVisible: =
 
     backGround As button:
