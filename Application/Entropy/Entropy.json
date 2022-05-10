@@ -3,70 +3,91 @@
   "ControlUniqueIds": {
     "App": 1,
     "backGround": 4,
-    "closedEye": 10,
+    "closedEye": 7,
     "emailInput": 5,
-    "eraser": 13,
-    "HtmlText1": 8,
-    "loginButton": 7,
+    "eraser": 9,
+    "HtmlText1": 11,
+    "Image1": 16,
+    "Label1_1": 14,
+    "Label1_2": 15,
+    "loginButton": 10,
     "LoginScreen": 3,
-    "openEye": 9,
+    "openEye": 8,
+    "passwordBox": 12,
     "passwordInput": 6
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "05/10/2022 14:59:29",
+  "HeaderLastSavedDateTimeUTC": "05/10/2022 15:17:09",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
     "icons8-excluir-30": "c238eed9-71aa-47d2-9ac3-b273c5c2a2a7.png",
     "icons8-eyelashes-2d-48": "18b6cd1c-b5b1-418b-aef6-efa0d4a5b8bd.png",
-    "icons8-visível-48": "c7f44b35-6115-4ce6-9413-5d8875681a25.png"
+    "icons8-visível-48": "c7f44b35-6115-4ce6-9413-5d8875681a25.png",
+    "P LOGO": "57ffc3e8-524e-4cc6-85da-7cc053086ec1.png"
   },
   "LocalResourceRootPaths": {
-    "icons8-excluir-30": "https://docserverpwaprodscus.blob.core.windows.net/8ac12cb0-db68-44f5-9945-473e8330d276-1/resource/e67acbcb-6ea5-4d3c-89b6-b0219ba987d5.png?sv=2017-04-17&sr=b&sig=nAOlQa51BtycX3WIdTaPRjCz4Uh8VULItvPlc7UryiA%3D&spr=https&se=2022-05-11T14%3A43%3A09Z&sp=r",
-    "icons8-eyelashes-2d-48": "https://docserverpwaprodscus.blob.core.windows.net/8ac12cb0-db68-44f5-9945-473e8330d276-1/resource/309976ee-2516-419a-a95b-4c99827f7e95.png?sv=2017-04-17&sr=b&sig=mwbtB8zGkYNkydKHNOhwgOQqQ9YkFD%2F4Ntv87ICqoLg%3D&spr=https&se=2022-05-11T14%3A40%3A46Z&sp=r",
-    "icons8-visível-48": "https://docserverpwaprodscus.blob.core.windows.net/8ac12cb0-db68-44f5-9945-473e8330d276-1/resource/0298604b-8276-43c4-9f6c-f21b4d534f6e.png?sv=2017-04-17&sr=b&sig=y4QtySlEa4BnZiN37rXDQJDJBGmd1V2UmbJ9EOQFmz0%3D&spr=https&se=2022-05-11T14%3A40%3A47Z&sp=r"
+    "icons8-excluir-30": "https://docserverpwaprodscus.blob.core.windows.net/19c3d162-1c12-457b-b35e-f46bda531c77-1/resource/Assets0Images0c238eed9-71aa-47d2-9ac3-b273c5c2a2a7.png?sv=2017-04-17&sr=b&sig=iMGUqGGod9tDuww0jDyrkfohoMranyKjhOHY%2BMWnte8%3D&spr=https&se=2022-05-11T15%3A15%3A22Z&sp=r",
+    "icons8-eyelashes-2d-48": "https://docserverpwaprodscus.blob.core.windows.net/19c3d162-1c12-457b-b35e-f46bda531c77-1/resource/Assets0Images018b6cd1c-b5b1-418b-aef6-efa0d4a5b8bd.png?sv=2017-04-17&sr=b&sig=RK4z5%2B1ex4yIjpia2M8XCaaKY9FC1lw%2BJBDi3CBFanE%3D&spr=https&se=2022-05-11T15%3A15%3A22Z&sp=r",
+    "icons8-visível-48": "https://docserverpwaprodscus.blob.core.windows.net/19c3d162-1c12-457b-b35e-f46bda531c77-1/resource/Assets0Images0c7f44b35-6115-4ce6-9413-5d8875681a25.png?sv=2017-04-17&sr=b&sig=%2B9oQd4HoPdTtT3SM1TzzB4MMlDarydCMJaZe5fOdvzU%3D&spr=https&se=2022-05-11T15%3A15%3A22Z&sp=r",
+    "P LOGO": "https://docserverpwaprodscus.blob.core.windows.net/19c3d162-1c12-457b-b35e-f46bda531c77-1/resource/bdbe4aaa-2788-4570-a9b8-2e512566a89c.png?sv=2017-04-17&sr=b&sig=7cakgvVr73K%2FNdW4Y8OTRmh6hy4%2Fax%2BxBK7bXx56%2Bzg%3D&spr=https&se=2022-05-11T15%3A29%3A30Z&sp=r"
   },
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {},
-  "OrderGroupControls": {},
+  "OrderGroupControls": {
+    "passwordBox": {
+      "closedEye": 2,
+      "eraser": 1,
+      "openEye": 0,
+      "passwordInput": 3
+    }
+  },
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
     "button": 0,
-    "htmlViewer": 3,
-    "image": 2,
-    "text": 1
+    "htmlViewer": 4,
+    "image": 1,
+    "label": 2,
+    "text": 3
   },
   "PublishOrderIndices": {
     "App": 0,
     "backGround": 0,
-    "closedEye": 3,
-    "emailInput": 1,
-    "eraser": 5,
-    "HtmlText1": 7,
-    "loginButton": 6,
+    "closedEye": 5,
+    "emailInput": 2,
+    "eraser": 8,
+    "HtmlText1": 10,
+    "Image1": 0,
+    "Label1_1": 3,
+    "Label1_2": 1,
+    "loginButton": 9,
     "LoginScreen": 0,
-    "openEye": 4,
-    "passwordInput": 2
+    "openEye": 6,
+    "passwordBox": 7,
+    "passwordInput": 4
   },
   "ResourcesJsonIndices": {
     "Image-icons8-excluir-30": 3,
     "Image-icons8-eyelashes-2d-48": 0,
     "Image-icons8-visível-48": 1,
+    "Image-P LOGO": 4,
     "Image-SampleImage": 2
   },
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0649674,
+    "AnalysisLoadTime": 0.10892,
     "ControlCount": {
       "button": 2,
       "htmlViewer": 1,
+      "image": 3,
+      "label": 2,
       "screen": 1,
       "text": 2
     },
-    "DeserializationLoadTime": 2.236808,
+    "DeserializationLoadTime": 0.6955606,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true
