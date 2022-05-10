@@ -3,21 +3,31 @@
   "ControlUniqueIds": {
     "App": 1,
     "backGround": 4,
+    "backGround_1": 19,
     "closedEye": 7,
+    "CreateLoginScreen": 17,
     "emailInput": 5,
+    "emailInput_1": 21,
+    "emailLabel": 20,
     "eraser": 9,
+    "eraser_1": 26,
     "HtmlText1": 11,
+    "Icon1": 30,
     "Image1": 16,
     "Label1_1": 14,
     "Label1_2": 15,
     "loginButton": 10,
+    "loginButton_1": 27,
     "LoginScreen": 3,
+    "messageLabel": 22,
     "openEye": 8,
     "passwordBox": 12,
-    "passwordInput": 6
+    "passwordBox_1": 29,
+    "passwordInput": 6,
+    "passwordInput_1": 23
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "05/10/2022 15:25:58",
+  "HeaderLastSavedDateTimeUTC": "05/10/2022 15:32:30",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -42,6 +52,10 @@
       "eraser": 1,
       "openEye": 0,
       "passwordInput": 3
+    },
+    "passwordBox_1": {
+      "eraser_1": 0,
+      "passwordInput_1": 1
     }
   },
   "OrderPcfTemplate": {},
@@ -49,6 +63,7 @@
   "OrderXMLTemplate": {
     "button": 1,
     "htmlViewer": 4,
+    "icon": 5,
     "image": 0,
     "label": 2,
     "text": 3
@@ -56,18 +71,28 @@
   "PublishOrderIndices": {
     "App": 0,
     "backGround": 1,
+    "backGround_1": 13,
     "closedEye": 7,
+    "CreateLoginScreen": 0,
     "emailInput": 3,
+    "emailInput_1": 15,
+    "emailLabel": 14,
     "eraser": 9,
+    "eraser_1": 19,
     "HtmlText1": 11,
+    "Icon1": 12,
     "Image1": 0,
     "Label1_1": 4,
     "Label1_2": 2,
     "loginButton": 10,
+    "loginButton_1": 20,
     "LoginScreen": 0,
+    "messageLabel": 16,
     "openEye": 8,
     "passwordBox": 6,
-    "passwordInput": 5
+    "passwordBox_1": 18,
+    "passwordInput": 5,
+    "passwordInput_1": 17
   },
   "ResourcesJsonIndices": {
     "Image-icons8-excluir-30": 3,
@@ -80,12 +105,13 @@
   "VolatileProperties": {
     "AnalysisLoadTime": 0.10892,
     "ControlCount": {
-      "button": 2,
-      "htmlViewer": 1,
-      "image": 3,
-      "label": 2,
-      "screen": 1,
-      "text": 2
+      "button": 4,
+      "group": 1,
+      "htmlViewer": 2,
+      "image": 7,
+      "label": 4,
+      "screen": 2,
+      "text": 4
     },
     "DeserializationLoadTime": 0.6955606,
     "ErrorCount": 0

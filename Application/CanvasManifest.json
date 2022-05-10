@@ -99,6 +99,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "LoginScreen"
+    "LoginScreen",
+    "CreateLoginScreen"
   ]
 }

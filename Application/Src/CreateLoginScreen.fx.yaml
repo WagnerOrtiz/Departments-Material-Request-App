@@ -1,0 +1,114 @@
+CreateLoginScreen As screen:
+    Fill: =RGBA(31, 29, 29, 1)
+    OnVisible: =
+
+    backGround_1 As button:
+        DisabledBorderColor: =RGBA(56, 52, 52, 1)
+        DisabledFill: =RGBA(56, 52, 52, 1)
+        Fill: =RGBA(135, 127, 127, 1)
+        Height: =819
+        HoverBorderColor: =RGBA(56, 52, 52, 1)
+        HoverFill: =RGBA(56, 52, 52, 1)
+        PressedFill: =RGBA(56, 52, 52, 1)
+        Size: =24
+        Text: =""
+        Width: =514
+        X: =68
+        Y: =170
+        ZIndex: =1
+
+    loginButton_1 As button:
+        BorderColor: =RGBA(109, 49, 162, 1)
+        DisabledFill: =RGBA(109, 49, 162, 1)
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =67
+        HoverFill: =RGBA(109, 49, 170, 1)
+        PressedFill: =RGBA(109, 49, 162, 1)
+        Size: =24
+        Text: ="Enviar"
+        Width: =236
+        X: =207
+        Y: =882
+        ZIndex: =3
+
+    messageLabel As label:
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Height: =70
+        Size: =18
+        Text: ="Mensagem"
+        Width: =430
+        X: =110
+        Y: =419
+        ZIndex: =8
+
+    emailLabel As label:
+        Height: =70
+        Size: =18
+        Text: ="E-mail"
+        Width: =430
+        X: =110
+        Y: =221
+        ZIndex: =9
+
+    passwordBox_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =9
+
+        passwordInput_1 As text:
+            BorderThickness: =0
+            Clear: =true
+            Default: =""
+            DisplayMode: =
+            Height: =283
+            HintText: ="Digite sua mensagem..."
+            MaxLength: =25
+            Mode: =TextMode.MultiLine
+            PaddingTop: =15
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Size: =18
+            Width: =430
+            X: =110
+            Y: =479
+            ZIndex: =2
+
+        eraser_1 As image:
+            Height: =37
+            Image: ='icons8-excluir-30'
+            OnSelect: =Reset(passwordInput_1)
+            Width: =31
+            X: =499
+            Y: =489
+            ZIndex: =6
+
+    emailInput_1 As text:
+        BorderThickness: =0
+        Default: =""
+        DisabledBorderColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Height: =72
+        HintText: ="Digite seu e-mail"
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Size: =18
+        Width: =430
+        X: =110
+        Y: =279
+        ZIndex: =11
+
+    Icon1 As icon.CheckBadge:
+        Color: =RGBA(109, 49, 162, 1)
+        Icon: =Icon.ChevronLeft
+        X: =40
+        Y: =40
+        ZIndex: =12
+
