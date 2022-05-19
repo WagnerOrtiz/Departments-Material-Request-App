@@ -19,20 +19,6 @@ Requisicoes As screen:
         Width: =640
         ZIndex: =1
 
-    loginButton_2 As button:
-        BorderColor: =RGBA(109, 49, 162, 1)
-        DisabledFill: =RGBA(109, 49, 162, 1)
-        Fill: =RGBA(109, 49, 162, 1)
-        Height: =67
-        HoverFill: =RGBA(109, 49, 170, 1)
-        PressedFill: =RGBA(109, 49, 162, 1)
-        Size: =24
-        Text: ="Enviar"
-        Width: =236
-        X: =358
-        Y: =22
-        ZIndex: =3
-
     Icon1_1 As icon.CheckBadge:
         Color: =RGBA(109, 49, 162, 1)
         Height: =55
@@ -54,12 +40,12 @@ Requisicoes As screen:
         ZIndex: =13
 
     FiltersLabel As gallery.galleryHorizontal:
-        Height: =68
+        Height: =58
         Items: |-
             =Table({Status: "Pendentes"},{Status: "Aprovados"},{Status: "Reprovados"},{Status: "Entregues"})
         ShowScrollbar: =false
         TemplateSize: =(Requisicoes.Width)/4.2
-        Y: =176
+        Y: =119
         ZIndex: =14
 
         Labels As label:
@@ -82,18 +68,21 @@ Requisicoes As screen:
             Size: =24
             Text: =""
             Visible: =If(ThisItem.IsSelected,true,false)
-            Y: =73
+            Width: =152
+            Y: =47
             ZIndex: =2
 
     "MaterialsDashBoard As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
-        Height: =768
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Height: =658
         Items: =ListaRequisicao
         ShowNavigation: =true
         ShowScrollbar: =false
         TemplatePadding: =10
-        TemplateSize: =App.Width/4
-        WrapCount: =4
-        Y: =240
+        TemplateSize: =App.Width/3.3
+        WrapCount: =3
+        X: =5
+        Y: =278
         ZIndex: =15
 
         Image2 As image:
@@ -115,17 +104,17 @@ Requisicoes As screen:
             Text: =ThisItem.Material.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =128
-            X: =16
-            Y: =154
+            X: =21
+            Y: =170
             ZIndex: =3
 
     NavBar As gallery.galleryHorizontal:
-        Height: =72
+        Height: =106
         Items: |-
-            =Table({Status: "Credenciamento"},{Status: "Dashboard"},{Status: "Configurações"})
+            =Table({Status: "Credenciamento", Imagem:'home'},{Status: "Dashboard", Imagem:list},{Status: "Configurações", Imagem:'home'})
         ShowScrollbar: =false
-        TemplateSize: =(Requisicoes.Width)/3
-        Y: =1063
+        TemplateSize: =213
+        Y: =1028
         ZIndex: =16
 
         LabelsNavBar As label:
@@ -134,10 +123,10 @@ Requisicoes As screen:
             Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
             FontWeight: =FontWeight.Semibold
             Height: =52
-            Size: =17
+            Size: =15
             Text: =ThisItem.Status
             Width: =198
-            Y: =3
+            Y: =38
             ZIndex: =1
 
         UnderlineNavBar As button:
@@ -149,6 +138,14 @@ Requisicoes As screen:
             Text: =""
             Visible: =If(ThisItem.IsSelected,true,false)
             Width: =LabelsNavBar.Width
-            Y: =3
             ZIndex: =2
+
+        Image6 As image:
+            Height: =30
+            Image: ='ic_fluent_home_24_filled (1)'
+            OnSelect: =Select(Parent)
+            Width: =142
+            X: =28
+            Y: =13
+            ZIndex: =3
 
