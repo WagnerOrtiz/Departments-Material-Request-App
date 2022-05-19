@@ -11,6 +11,15 @@
     "datasets": {
       "https://n0pc.sharepoint.com/sites/RequisicaoMateriais": {
         "dataSources": {
+          "Imagens": {
+            "tableName": "ce36b5cd-58eb-4a4d-be16-45d6a97597c3"
+          },
+          "Lista de Materiais": {
+            "tableName": "b2ae6a1d-a4bd-4bd5-ac30-2e14a1ac120e"
+          },
+          "ListaRequisicao": {
+            "tableName": "d8615bf6-dd6e-4349-bf1e-5894cae28a77"
+          },
           "Usuarios": {
             "tableName": "77629c20-1604-4a02-893b-3c3b7b2d6c88"
           }
@@ -18,7 +27,10 @@
       }
     },
     "dataSources": [
-      "Usuarios"
+      "Usuarios",
+      "ListaRequisicao",
+      "Lista de Materiais",
+      "Imagens"
     ],
     "dependencies": {},
     "dependents": [],

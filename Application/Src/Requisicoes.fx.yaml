@@ -6,14 +6,14 @@ Requisicoes As screen:
         DisabledBorderColor: =RGBA(56, 52, 52, 1)
         DisabledFill: =RGBA(56, 52, 52, 1)
         Fill: =RGBA(135, 127, 127, 1)
-        Height: =122
+        Height: =100
         HoverBorderColor: =RGBA(56, 52, 52, 1)
         HoverFill: =RGBA(56, 52, 52, 1)
         PressedFill: =RGBA(56, 52, 52, 1)
-        RadiusBottomLeft: =20
-        RadiusBottomRight: =20
-        RadiusTopLeft: =20
-        RadiusTopRight: =20
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =24
         Text: =""
         Width: =640
@@ -29,16 +29,18 @@ Requisicoes As screen:
         Size: =24
         Text: ="Enviar"
         Width: =236
-        X: =207
-        Y: =862
+        X: =358
+        Y: =22
         ZIndex: =3
 
     Icon1_1 As icon.CheckBadge:
         Color: =RGBA(109, 49, 162, 1)
+        Height: =55
         Icon: =Icon.ChevronLeft
         OnSelect: =Back()
+        Width: =55
         X: =22
-        Y: =31
+        Y: =23
         ZIndex: =12
 
     Label4 As label:
@@ -48,6 +50,105 @@ Requisicoes As screen:
         Text: ="Olá, " & LookUp(Usuarios,Email = emailInput.Text, Nome)
         Width: =483
         X: =125
-        Y: =28
+        Y: =20
         ZIndex: =13
+
+    FiltersLabel As gallery.galleryHorizontal:
+        Height: =68
+        Items: |-
+            =Table({Status: "Pendentes"},{Status: "Aprovados"},{Status: "Reprovados"},{Status: "Entregues"})
+        ShowScrollbar: =false
+        TemplateSize: =(Requisicoes.Width)/4.2
+        Y: =176
+        ZIndex: =14
+
+        Labels As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 0, 1)
+            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            Size: =17
+            Text: =ThisItem.Status
+            Width: =160
+            Y: =3
+            ZIndex: =1
+
+        UnderlineFilters As button:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            Fill: =RGBA(109, 49, 162, 1)
+            Height: =0
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: =""
+            Visible: =If(ThisItem.IsSelected,true,false)
+            Y: =73
+            ZIndex: =2
+
+    "MaterialsDashBoard As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Height: =768
+        Items: =ListaRequisicao
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =10
+        TemplateSize: =App.Width/4
+        WrapCount: =4
+        Y: =240
+        ZIndex: =15
+
+        Image2 As image:
+            Height: =155
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth - 32
+            X: =16
+            Y: =10
+            ZIndex: =1
+
+        Subtitle2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =29
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Material.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =128
+            X: =16
+            Y: =154
+            ZIndex: =3
+
+    NavBar As gallery.galleryHorizontal:
+        Height: =72
+        Items: |-
+            =Table({Status: "Credenciamento"},{Status: "Dashboard"},{Status: "Configurações"})
+        ShowScrollbar: =false
+        TemplateSize: =(Requisicoes.Width)/3
+        Y: =1063
+        ZIndex: =16
+
+        LabelsNavBar As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 0, 1)
+            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
+            FontWeight: =FontWeight.Semibold
+            Height: =52
+            Size: =17
+            Text: =ThisItem.Status
+            Width: =198
+            Y: =3
+            ZIndex: =1
+
+        UnderlineNavBar As button:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            Fill: =RGBA(109, 49, 162, 1)
+            Height: =0
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: =""
+            Visible: =If(ThisItem.IsSelected,true,false)
+            Width: =LabelsNavBar.Width
+            Y: =3
+            ZIndex: =2
 
