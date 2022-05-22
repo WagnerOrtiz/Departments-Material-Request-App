@@ -75,14 +75,26 @@ Requisicoes As screen:
     "MaterialsDashBoard As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 0, 0, 0)
         Height: =658
-        Items: =ListaRequisicao
+        Items: |-
+            =If(
+                IsBlank(numRequisicaoInput.Text),
+                LookUp(
+                    ListaRequisicao,
+                    Status = FiltersLabel.Selected.Labels.Text,
+                    ThisRecord
+                ),
+                LookUp(
+                    ListaRequisicao.ID,
+                    ID = numRequisicaoInput.Text,
+                    ThisRecord
+                )
+            )
         ShowNavigation: =true
         ShowScrollbar: =false
         TemplatePadding: =10
         TemplateSize: =App.Width/3.3
         WrapCount: =3
-        X: =5
-        Y: =278
+        Y: =313
         ZIndex: =15
 
         Image2 As image:
@@ -101,7 +113,7 @@ Requisicoes As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Material.Value
+            Text: =ThisItem.ID
             VerticalAlign: =VerticalAlign.Top
             Width: =128
             X: =21
@@ -159,14 +171,18 @@ Requisicoes As screen:
             Y: =18
             ZIndex: =5
 
-    TextInput1 As text:
+    numRequisicaoInput As text:
         BorderColor: =RGBA(153, 153, 153, 1)
         Color: =White
         Default: =""
+        DisabledColor: =RGBA(255, 255, 255, 1)
         Fill: =If(dark, RGBA(31, 29, 29, 1), White)
         Height: =70
         HintText: ="Nº requisição"
-        PaddingLeft: =80
+        HoverBorderColor: =RGBA(153, 153, 153, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        PaddingLeft: =90
         RadiusBottomLeft: =40
         RadiusBottomRight: =40
         RadiusTopLeft: =40
@@ -174,13 +190,15 @@ Requisicoes As screen:
         Size: =21
         Width: =560
         X: =48
-        Y: =192
+        Y: =206
         ZIndex: =17
 
     Icon6 As icon.Search:
         Color: =White
+        Height: =51
         Icon: =Icon.Search
-        X: =40
-        Y: =40
+        Width: =40
+        X: =77
+        Y: =216
         ZIndex: =18
 
