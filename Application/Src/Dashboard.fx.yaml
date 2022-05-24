@@ -1,4 +1,4 @@
-Requisicoes As screen:
+Dashboard As screen:
     Fill: =If(dark, RGBA(31, 29, 29, 1), White)
     OnVisible: =
 
@@ -44,7 +44,7 @@ Requisicoes As screen:
         Items: |-
             =Table({Status: "Pendentes"},{Status: "Aprovados"},{Status: "Reprovados"},{Status: "Entregues"})
         ShowScrollbar: =false
-        TemplateSize: =(Requisicoes.Width)/4.2
+        TemplateSize: =(Dashboard.Width)/4.2
         Y: =119
         ZIndex: =14
 
@@ -201,4 +201,24 @@ Requisicoes As screen:
         X: =77
         Y: =216
         ZIndex: =18
+
+    Label1 As label:
+        Color: =RGBA(255, 255, 0, 1)
+        Height: =70
+        Size: =21
+        Text: ="FALTA AJUSTAR ALGUMAS COISAS"
+        Width: =560
+        X: =80
+        Y: =678
+        ZIndex: =19
+
+    Icon2 As icon.Add:
+        Color: =RGBA(109, 49, 162, 1)
+        Height: =116
+        Icon: =Icon.Add
+        OnSelect: =Navigate(Requests)
+        Width: =109
+        X: =499
+        Y: =889
+        ZIndex: =20
 

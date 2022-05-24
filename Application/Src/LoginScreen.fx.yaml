@@ -31,7 +31,7 @@ LoginScreen As screen:
                     emailInput.Text = LookUp(Usuarios, emailInput.Text = Email,Email),          // Checa se o email está cadastrado
                     If(
                         LookUp(Usuarios, emailInput.Text = Email,Senha) = passwordInput.Text,   // Checa se a senha está correta
-                        Navigate(Requisicoes,ScreenTransition.CoverRight),
+                        Navigate(Dashboard,ScreenTransition.CoverRight),
                         Set(login, "Senha incorreta")
                     ),
                     Set(login, "E-mail não cadastrado")

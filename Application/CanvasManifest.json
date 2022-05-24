@@ -101,6 +101,7 @@
   "ScreenOrder": [
     "LoginScreen",
     "CreateLoginScreen",
-    "Requisicoes"
+    "Dashboard",
+    "Requests"
   ]
 }
