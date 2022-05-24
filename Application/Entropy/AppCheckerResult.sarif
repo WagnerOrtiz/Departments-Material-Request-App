@@ -55,6 +55,127 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Requests.RequestForm.Status_Box.StatusDataCard.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Requests.RequestForm.Status_Box.StatusDataCard.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charOffset": 34,
+                  "snippet": {
+                    "text": ""
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Requests",
+                "type": "Requests.RequestForm.Status_Box.StatusDataCard"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ParenClose",
+              "Eof"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Requests.RequestForm.Status_Box.StatusDataCard.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Requests.RequestForm.Status_Box.StatusDataCard.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 2,
+                  "snippet": {
+                    "text": "("
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Requests",
+                "type": "Requests.RequestForm.Status_Box.StatusDataCard"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "1",
+              "2"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadArityMinimum",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Requests.RequestForm.RequisitouPara_Box.RequisitouParaDataCard.SearchItems"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Requests.RequestForm.RequisitouPara_Box.RequisitouParaDataCard.SearchItems",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 19,
+                  "charOffset": 57,
+                  "snippet": {
+                    "text": "\"ComplianceAssetId\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "SearchItems",
+                "module": "Requests",
+                "type": "Requests.RequestForm.RequisitouPara_Box.RequisitouParaDataCard"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Search"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "CreateLoginScreen.Icon1.AccessibleLabel"
                 }
               ],
@@ -78,7 +199,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -108,7 +229,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -138,7 +259,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -168,7 +289,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -198,7 +319,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -228,7 +349,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -258,7 +379,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -288,7 +409,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -318,7 +439,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -348,7 +469,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -378,7 +499,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -408,7 +529,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -438,7 +559,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -468,7 +589,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -498,7 +619,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -528,7 +649,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -558,7 +679,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -588,7 +709,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -618,7 +739,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -648,7 +769,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -678,7 +799,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -708,7 +829,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -738,7 +859,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -768,7 +889,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -798,7 +919,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -828,26 +949,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.Form1.UsoProprio_Box.DataCardValue4.ShowLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.UsoProprio_Box.UsoProprioDataCard.ShowLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.Form1.UsoProprio_Box.DataCardValue4.ShowLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.UsoProprio_Box.UsoProprioDataCard.ShowLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "ShowLabel",
                 "module": "Requests",
-                "type": "Requests.Form1.UsoProprio_Box.DataCardValue4"
+                "type": "Requests.RequestForm.UsoProprio_Box.UsoProprioDataCard"
               }
             }
           ],
@@ -858,7 +979,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-HelpfulControlSettingNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -888,7 +1009,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -918,26 +1039,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.Form1.Status_Box.DataCardValue2.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.Status_Box.StatusDataCard.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.Form1.Status_Box.DataCardValue2.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.Status_Box.StatusDataCard.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.Form1.Status_Box.DataCardValue2"
+                "type": "Requests.RequestForm.Status_Box.StatusDataCard"
               }
             }
           ],
@@ -948,7 +1069,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -978,7 +1099,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1008,26 +1129,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.Form1.Prioridade_Box.DataCardValue3.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.Prioridade_Box.PrioridadeDataCard.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.Form1.Prioridade_Box.DataCardValue3.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.Prioridade_Box.PrioridadeDataCard.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.Form1.Prioridade_Box.DataCardValue3"
+                "type": "Requests.RequestForm.Prioridade_Box.PrioridadeDataCard"
               }
             }
           ],
@@ -1038,26 +1159,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.Form1.UsoProprio_Box.DataCardValue4.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.UsoProprio_Box.UsoProprioDataCard.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.Form1.UsoProprio_Box.DataCardValue4.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.UsoProprio_Box.UsoProprioDataCard.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.Form1.UsoProprio_Box.DataCardValue4"
+                "type": "Requests.RequestForm.UsoProprio_Box.UsoProprioDataCard"
               }
             }
           ],
@@ -1068,26 +1189,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.Form1.RequisitouPara_Box.DataCardValue5.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.RequisitouPara_Box.RequisitouParaDataCard.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.Form1.RequisitouPara_Box.DataCardValue5.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.RequisitouPara_Box.RequisitouParaDataCard.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.Form1.RequisitouPara_Box.DataCardValue5"
+                "type": "Requests.RequestForm.RequisitouPara_Box.RequisitouParaDataCard"
               }
             }
           ],
@@ -1098,26 +1219,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.Form1.DataPrevistaRetirada_Box.DateValue1.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.DataPrevistaRetirada_Box.DataRetirada.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.Form1.DataPrevistaRetirada_Box.DateValue1.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.DataPrevistaRetirada_Box.DataRetirada.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.Form1.DataPrevistaRetirada_Box.DateValue1"
+                "type": "Requests.RequestForm.DataPrevistaRetirada_Box.DataRetirada"
               }
             }
           ],
@@ -1128,26 +1249,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.Form1.Material_DataCard1.DataCardValue8.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.Material_DataCard1.MaterialDataCard.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.Form1.Material_DataCard1.DataCardValue8.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.Material_DataCard1.MaterialDataCard.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.Form1.Material_DataCard1.DataCardValue8"
+                "type": "Requests.RequestForm.Material_DataCard1.MaterialDataCard"
               }
             }
           ],
@@ -1158,26 +1279,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.Form1.Solicitante_DataCard1.DataCardValue9.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.Solicitante_DataCard1.DataCardValue9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.Form1.Solicitante_DataCard1.DataCardValue9.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.Solicitante_DataCard1.DataCardValue9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.Form1.Solicitante_DataCard1.DataCardValue9"
+                "type": "Requests.RequestForm.Solicitante_DataCard1.DataCardValue9"
               }
             }
           ],
@@ -1188,26 +1309,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.Form1.ValorTotal_DataCard1.DataCardValue6.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.ValorTotal_DataCard1.ValorDataCard.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.Form1.ValorTotal_DataCard1.DataCardValue6.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.ValorTotal_DataCard1.ValorDataCard.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.Form1.ValorTotal_DataCard1.DataCardValue6"
+                "type": "Requests.RequestForm.ValorTotal_DataCard1.ValorDataCard"
               }
             }
           ],
@@ -1218,26 +1339,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.Form1.Quantidade_DataCard1.DataCardValue7.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.Quantidade_DataCard1.QuantidadeDataCard.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.Form1.Quantidade_DataCard1.DataCardValue7.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.Quantidade_DataCard1.QuantidadeDataCard.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.Form1.Quantidade_DataCard1.DataCardValue7"
+                "type": "Requests.RequestForm.Quantidade_DataCard1.QuantidadeDataCard"
               }
             }
           ],
@@ -1248,7 +1369,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1278,7 +1399,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1308,7 +1429,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 7
         }
       ],
       "tool": {
@@ -1328,6 +1449,56 @@
                 "howToFix": [
                   "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
                   "If you’re comparing records or tables, the field or column types must match exactly."
+                ],
+                "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrExpectedFound-Ex-Fnd",
+              "messageStrings": {
+                "issue": {
+                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or replace the unexpected characters with an expected character."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrBadArityMinimum",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid number of arguments: received {0}, expected {1} or more."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-SuggestRemoteExecutionHint",
+              "messageStrings": {
+                "issue": {
+                  "text": "Delegation warning. The \"{0}\" part of this formula might not work correctly on large data sets."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "If your data set exceeds the 500 record limit but contains less than 2,000 records, try resetting the limit.",
+                  "Try simplifying the formula.",
+                  "Try moving your data to a different data source."
                 ],
                 "level": "Medium",
                 "primaryCategory": "formula",
