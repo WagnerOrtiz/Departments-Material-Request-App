@@ -92,9 +92,9 @@ Requests As screen:
 
     RequestForm As form:
         DataSource: =ListaRequisicao
-        Height: =843
+        Height: =747
         Width: =640
-        Y: =162
+        Y: =136
         ZIndex: =6
 
         Material_Box As typedDataCard.comboBoxEditCard:
@@ -642,28 +642,15 @@ Requests As screen:
 
             ValorDataCard As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: |-
-                    =If(
-                        QuantidadeDataCard.Text = "",
-                        "",
-                        Text(
-                            Value(
-                                LookUp(
-                                    'Lista de Materiais',
-                                    NomeMaterial = MaterialDataCard.Selected.Value, Valor
-                                )
-                            ) * QuantidadeDataCard.Text,
-                            "R$ #.###.00,00"
-                        )
-                    )
+                Default: =
                 DelayOutput: =true
-                DisplayMode: =DisplayMode.View
+                DisplayMode: =DisplayMode.Disabled
                 Format: =TextFormat.Number
                 Height: =70
                 HintText: |-
                     =If(
-                        QuantidadeDataCard.Text = Blank(),
-                        Blank(),
+                        QuantidadeDataCard.Text = "",
+                        "R$ 0,00",
                         Text(
                             Value(
                                 LookUp(
@@ -671,7 +658,7 @@ Requests As screen:
                                     NomeMaterial = MaterialDataCard.Selected.Value, Valor
                                 )
                             ) * QuantidadeDataCard.Text,
-                            "R$ #.###.00,00"
+                            "R$ #.###,00"
                         )
                     )
                 PaddingLeft: =5
