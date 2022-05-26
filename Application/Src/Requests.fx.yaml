@@ -40,12 +40,12 @@ Requests As screen:
         ZIndex: =3
 
     NavBar_1 As gallery.galleryHorizontal:
-        Height: =106
+        Height: =94
         Items: |-
             =Table({Status: "Credenciamento"},{Status: "Dashboard"},{Status: "Configurações"})
         ShowScrollbar: =false
         TemplateSize: =213
-        Y: =1028
+        Y: =1039
         ZIndex: =4
 
         LabelsNavBar_1 As label:
@@ -53,11 +53,11 @@ Requests As screen:
             BorderColor: =RGBA(255, 255, 0, 1)
             Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
             FontWeight: =FontWeight.Semibold
-            Height: =52
+            Height: =43
             Size: =15
             Text: =ThisItem.Status
             Width: =198
-            Y: =43
+            Y: =41
             ZIndex: =1
 
         UnderlineNavBar_1 As button:
@@ -87,7 +87,7 @@ Requests As screen:
             OnSelect: =Select(Parent)
             Width: =44
             X: =77
-            Y: =18
+            Y: =11
             ZIndex: =5
 
     RequestForm As form:
@@ -130,7 +130,7 @@ Requests As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =60
                 Items: =Choices([@ListaRequisicao].Material)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
@@ -189,7 +189,7 @@ Requests As screen:
             Update: =DataCardValue8.Selected
             Width: =640
             X: =0
-            Y: =3
+            Y: =7
             ZIndex: =1
 
             DataCardKey18 As label:
@@ -201,18 +201,19 @@ Requests As screen:
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =21
-                Y: =21
+                Y: =11
                 ZIndex: =1
 
             DataCardValue8 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 ChevronBackground: =RGBA(0, 0, 0, 0)
+                ChevronDisabledBackground: =RGBA(0, 0, 0, 0)
                 ChevronFill: |
                     =White
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["DisplayName","Email","Picture"]
                 DisplayMode: =If(UsoProprioDataCard, Disabled,DisplayMode.Edit)
-                Height: =70
+                Height: =60
                 Items: =Choices([@ListaRequisicao].RequisitouPara)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["DisplayName"]
@@ -286,7 +287,7 @@ Requests As screen:
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =46
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -296,8 +297,8 @@ Requests As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.6
-                X: =DataCardKey10.X + DataCardKey10.Width
-                Y: =10
+                X: =253
+                Y: =24
                 ZIndex: =2
 
             ErrorMessage10 As label:
@@ -361,7 +362,7 @@ Requests As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =60
                 Items: =Choices([@ListaRequisicao].Prioridade)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
@@ -413,7 +414,7 @@ Requests As screen:
             Update: =UsoProprioDataCard.Value
             Width: =640
             X: =0
-            Y: =2
+            Y: =6
             ZIndex: =18
 
             DataCardKey4 As label:
@@ -495,7 +496,7 @@ Requests As screen:
             Update: =DataRetirada.SelectedDate
             Width: =640
             X: =0
-            Y: =4
+            Y: =2
             ZIndex: =18
 
             DataCardKey6 As label:
@@ -507,7 +508,7 @@ Requests As screen:
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =21
-                Y: =20
+                Y: =10
                 ZIndex: =1
 
             DataRetirada As datepicker:
@@ -516,7 +517,7 @@ Requests As screen:
                 DefaultDate: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
-                Height: =70
+                Height: =60
                 IconBackground: =RGBA(109, 49, 162, 1)
                 IsEditable: =true
                 PaddingBottom: =0
@@ -552,7 +553,7 @@ Requests As screen:
             Update: =Value(QuantidadeDataCard.Text)
             Width: =640
             X: =0
-            Y: =5
+            Y: =3
             ZIndex: =18
 
             DataCardKey8 As label:
@@ -564,7 +565,7 @@ Requests As screen:
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =21
-                Y: =21
+                Y: =11
                 ZIndex: =1
 
             QuantidadeDataCard As text:
@@ -573,7 +574,7 @@ Requests As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
-                Height: =70
+                Height: =60  
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -625,7 +626,7 @@ Requests As screen:
             Update: =Value(ValorDataCard.Text)
             Width: =640
             X: =0
-            Y: =6
+            Y: =4
             ZIndex: =18
 
             DataCardKey7 As label:
@@ -646,7 +647,7 @@ Requests As screen:
                 DelayOutput: =true
                 DisplayMode: =DisplayMode.Disabled
                 Format: =TextFormat.Number
-                Height: =70
+                Height: =60  
                 HintText: |-
                     =If(
                         QuantidadeDataCard.Text = "",
@@ -713,7 +714,7 @@ Requests As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Status"
             Default: =ThisItem.Status
-            DisplayMode: =Parent.DisplayMode
+            DisplayMode: =Disabled
             DisplayName: =DataSourceInfo([@ListaRequisicao],DataSourceInfo.DisplayName,"Status")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
@@ -722,7 +723,7 @@ Requests As screen:
             Update: =StatusInput.Text
             Width: =640
             X: =0
-            Y: =7
+            Y: =5
             ZIndex: =18
 
             DataCardKey2 As label:
@@ -734,7 +735,7 @@ Requests As screen:
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =21
-                Y: =21
+                Y: =11
                 ZIndex: =1
 
             StatusInput As text:
@@ -751,7 +752,7 @@ Requests As screen:
                     )
                 DelayOutput: =true
                 DisplayMode: =DisplayMode.View
-                Height: =70
+                Height: =60  
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -791,4 +792,14 @@ Requests As screen:
                 Wrap: =false
                 Y: =DataCardKey2.Y
                 ZIndex: =4
+
+    Button2 As button:
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =60
+        Size: =21
+        Text: ="Requisitar"
+        Width: =217
+        X: =222
+        Y: =928
+        ZIndex: =7
 
