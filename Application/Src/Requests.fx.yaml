@@ -644,7 +644,7 @@ Requests As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: |-
                     =If(
-                        QuantidadeDataCard.Text = Blank(),
+                        QuantidadeDataCard.Text = "",
                         "",
                         Text(
                             Value(

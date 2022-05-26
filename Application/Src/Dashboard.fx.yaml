@@ -216,7 +216,7 @@ Dashboard As screen:
         Color: =RGBA(109, 49, 162, 1)
         Height: =116
         Icon: =Icon.Add
-        OnSelect: =NewForm(RequestForm);Navigate(Requests)
+        OnSelect: =ResetForm(RequestForm);NewForm(RequestForm);Navigate(Requests)
         Width: =109
         X: =499
         Y: =889
