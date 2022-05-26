@@ -650,16 +650,30 @@ Requests As screen:
                             Value(
                                 LookUp(
                                     'Lista de Materiais',
-                                    NomeMaterial = MaterialDataCard.Selected.Value
-                                ).Valor
+                                    NomeMaterial = MaterialDataCard.Selected.Value, Valor
+                                )
                             ) * QuantidadeDataCard.Text,
                             "R$ #.###.00,00"
                         )
                     )
                 DelayOutput: =true
-                DisplayMode: =Disabled
+                DisplayMode: =DisplayMode.View
                 Format: =TextFormat.Number
                 Height: =70
+                HintText: |-
+                    =If(
+                        QuantidadeDataCard.Text = Blank(),
+                        Blank(),
+                        Text(
+                            Value(
+                                LookUp(
+                                    'Lista de Materiais',
+                                    NomeMaterial = MaterialDataCard.Selected.Value, Valor
+                                )
+                            ) * QuantidadeDataCard.Text,
+                            "R$ #.###.00,00"
+                        )
+                    )
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
