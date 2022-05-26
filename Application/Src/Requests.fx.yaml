@@ -643,12 +643,18 @@ Requests As screen:
             ValorDataCard As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: |-
-                    =Text(
-                        LookUp(
-                            'Lista de Materiais',
-                            NomeMaterial = MaterialDataCard.Selected.Value
-                        ).Valor * QuantidadeDataCard.Text,
-                        "R$ #.###.00,00"
+                    =If(
+                        QuantidadeDataCard.Text = Blank(),
+                        "",
+                        Text(
+                            Value(
+                                LookUp(
+                                    'Lista de Materiais',
+                                    NomeMaterial = MaterialDataCard.Selected.Value
+                                ).Valor
+                            ) * QuantidadeDataCard.Text,
+                            "R$ #.###.00,00"
+                        )
                     )
                 DelayOutput: =true
                 DisplayMode: =Disabled
