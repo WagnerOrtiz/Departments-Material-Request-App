@@ -30,13 +30,13 @@ Requests As screen:
         ZIndex: =2
 
     Label4_1 As label:
+        Align: =Align.Center
         FontWeight: =FontWeight.Bold
-        Height: =70
+        Height: =100
         Size: =23
-        Text: ="Olá, " & LookUp(Usuarios,Email = emailInput.Text, Nome)
-        Width: =483
-        X: =125
-        Y: =20
+        Text: ="Fazer Requisição"
+        Width: =267
+        X: =197
         ZIndex: =3
 
     NavBar_1 As gallery.galleryHorizontal:
@@ -92,9 +92,9 @@ Requests As screen:
 
     RequestForm As form:
         DataSource: =ListaRequisicao
-        Height: =892
+        Height: =928
         Width: =640
-        Y: =136
+        Y: =100
         ZIndex: =6
 
         Material_Box As typedDataCard.comboBoxEditCard:
@@ -443,7 +443,7 @@ Requests As screen:
                 TrueFill: =RGBA(109, 49, 162, 1)
                 Width: =154
                 X: =242
-                Y: =8
+                Y: =12
                 ZIndex: =2
 
             ErrorMessage4 As label:
@@ -480,7 +480,7 @@ Requests As screen:
                 Text: =If(UsoProprioDataCard.Value = true, "Sim", "Não")
                 Width: =69
                 X: =345
-                Y: =12
+                Y: =15
                 ZIndex: =5
 
         DataPrevistaRetirada_Box As typedDataCard.dateTimeEditCard:
@@ -658,7 +658,7 @@ Requests As screen:
                                     NomeMaterial = MaterialDataCard.Selected.Value, Valor
                                 )
                             ) * QuantidadeDataCard.Text,
-                            "R$ #,##00.00"
+                            "R$ #,##0.00"
                         )
                     )
                 PaddingLeft: =5
@@ -702,7 +702,7 @@ Requests As screen:
 
             ValorNumberType As label:
                 Color: =RGBA(255, 255, 0, 1)
-                Size: =25
+                Size: =15
                 Text: =LookUp('Lista de Materiais',NomeMaterial = MaterialDataCard.Selected.Value, Valor) * QuantidadeDataCard
                 Width: =120
                 X: =40
