@@ -895,19 +895,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.RequestForm.Material_DataCard1.MaterialDataCard.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.Material_Box.MaterialDataCard.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.RequestForm.Material_DataCard1.MaterialDataCard.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.Material_Box.MaterialDataCard.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.RequestForm.Material_DataCard1.MaterialDataCard"
+                "type": "Requests.RequestForm.Material_Box.MaterialDataCard"
               }
             }
           ],
@@ -1015,19 +1015,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.RequestForm.RequisitouPara_DataCard2.DataCardValue8.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.RequisitouPara_Box.DataCardValue8.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.RequestForm.RequisitouPara_DataCard2.DataCardValue8.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.RequisitouPara_Box.DataCardValue8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.RequestForm.RequisitouPara_DataCard2.DataCardValue8"
+                "type": "Requests.RequestForm.RequisitouPara_Box.DataCardValue8"
               }
             }
           ],
@@ -1075,19 +1075,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.RequestForm.Quantidade_DataCard1.QuantidadeDataCard.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.Quantidade_Box.QuantidadeDataCard.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.RequestForm.Quantidade_DataCard1.QuantidadeDataCard.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.Quantidade_Box.QuantidadeDataCard.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.RequestForm.Quantidade_DataCard1.QuantidadeDataCard"
+                "type": "Requests.RequestForm.Quantidade_Box.QuantidadeDataCard"
               }
             }
           ],
@@ -1105,19 +1105,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.RequestForm.ValorTotal_DataCard1.ValorDataCard.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.ValorTotal_Box.ValorDataCard.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.RequestForm.ValorTotal_DataCard1.ValorDataCard.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.ValorTotal_Box.ValorDataCard.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.RequestForm.ValorTotal_DataCard1.ValorDataCard"
+                "type": "Requests.RequestForm.ValorTotal_Box.ValorDataCard"
               }
             }
           ],
@@ -1135,19 +1135,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.RequestForm.Status_Box.StatusDataCard.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.Status_Box.StatusInput.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.RequestForm.Status_Box.StatusDataCard.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.Status_Box.StatusInput.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.RequestForm.Status_Box.StatusDataCard"
+                "type": "Requests.RequestForm.Status_Box.StatusInput"
               }
             }
           ],
@@ -1165,19 +1165,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Requests.RequestForm.Solicitante_DataCard1.DataCardValue9.AccessibleLabel"
+                  "fullyQualifiedName": "Requests.RequestForm.Solicitante_Box.SolicitanteInput.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Requests.RequestForm.Solicitante_DataCard1.DataCardValue9.AccessibleLabel",
+                  "fullyQualifiedName": "Requests.RequestForm.Solicitante_Box.SolicitanteInput.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Requests",
-                "type": "Requests.RequestForm.Solicitante_DataCard1.DataCardValue9"
+                "type": "Requests.RequestForm.Solicitante_Box.SolicitanteInput"
               }
             }
           ],

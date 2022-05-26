@@ -97,7 +97,7 @@ Requests As screen:
         Y: =162
         ZIndex: =6
 
-        Material_DataCard1 As typedDataCard.comboBoxEditCard:
+        Material_Box As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Material"
             Default: =ThisItem.Material
@@ -177,7 +177,7 @@ Requests As screen:
                 X: =521
                 ZIndex: =5
 
-        RequisitouPara_DataCard2 As typedDataCard.comboBoxEditCard:
+        RequisitouPara_Box As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="RequisitouPara"
             Default: =ThisItem.RequisitouPara
@@ -253,7 +253,7 @@ Requests As screen:
                 Y: =DataCardKey18.Y
                 ZIndex: =4
 
-        Solicitante_DataCard1 As typedDataCard.textualEditCard:
+        Solicitante_Box As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Solicitante"
             Default: =ThisItem.Solicitante
@@ -263,7 +263,7 @@ Requests As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@ListaRequisicao], DataSourceInfo.MaxLength, "Solicitante")
             Required: =false
-            Update: =DataCardValue9.Text
+            Update: =SolicitanteInput.Text
             Width: =640
             X: =0
             Y: =8
@@ -281,7 +281,7 @@ Requests As screen:
                 Y: =21
                 ZIndex: =1
 
-            DataCardValue9 As text:
+            SolicitanteInput As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -313,7 +313,7 @@ Requests As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue9.Y + DataCardValue9.Height
+                Y: =SolicitanteInput.Y + SolicitanteInput.Height
                 ZIndex: =3
 
             StarVisible10 As label:
@@ -540,7 +540,7 @@ Requests As screen:
                 Y: =DataCardKey6.Y
                 ZIndex: =7
 
-        Quantidade_DataCard1 As typedDataCard.numberEditCard:
+        Quantidade_Box As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Quantidade"
             Default: =ThisItem.Quantidade
@@ -613,7 +613,7 @@ Requests As screen:
                 Y: =DataCardKey8.Y
                 ZIndex: =4
 
-        ValorTotal_DataCard1 As typedDataCard.numberEditCard:
+        ValorTotal_Box As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ValorTotal"
             Default: =ThisItem.ValorTotal
@@ -696,7 +696,7 @@ Requests As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@ListaRequisicao], DataSourceInfo.MaxLength, "Status")
             Required: =false
-            Update: =StatusDataCard.Text
+            Update: =StatusInput.Text
             Width: =640
             X: =0
             Y: =7
@@ -714,9 +714,18 @@ Requests As screen:
                 Y: =21
                 ZIndex: =1
 
-            StatusDataCard As text:
+            StatusInput As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =If(Value(ValorDataCard.Text) > 200, "Pendente", "Aprovado")
+                Default: |-
+                    =If(
+                        IsBlank(ValorDataCard),
+                        "",
+                        If(
+                            Value(ValorDataCard.Text) > 200,
+                            "Pendente",
+                            "Aprovado"
+                        )
+                    )
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -746,7 +755,7 @@ Requests As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =StatusDataCard.Y + StatusDataCard.Height
+                Y: =StatusInput.Y + StatusInput.Height
                 ZIndex: =3
 
             StarVisible2 As label:
