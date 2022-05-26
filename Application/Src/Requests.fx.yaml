@@ -92,7 +92,7 @@ Requests As screen:
 
     RequestForm As form:
         DataSource: =ListaRequisicao
-        Height: =747
+        Height: =892
         Width: =640
         Y: =136
         ZIndex: =6
@@ -658,7 +658,7 @@ Requests As screen:
                                     NomeMaterial = MaterialDataCard.Selected.Value, Valor
                                 )
                             ) * QuantidadeDataCard.Text,
-                            "R$ #.###,00"
+                            "R$ #,##00.00"
                         )
                     )
                 PaddingLeft: =5
@@ -700,6 +700,15 @@ Requests As screen:
                 Y: =DataCardKey7.Y
                 ZIndex: =4
 
+            ValorNumberType As label:
+                Color: =RGBA(255, 255, 0, 1)
+                Size: =25
+                Text: =LookUp('Lista de Materiais',NomeMaterial = MaterialDataCard.Selected.Value, Valor) * QuantidadeDataCard
+                Width: =120
+                X: =40
+                Y: =56
+                ZIndex: =5
+
         Status_Box As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Status"
@@ -732,16 +741,16 @@ Requests As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: |-
                     =If(
-                        IsBlank(ValorDataCard),
+                        ValorDataCard.HintText = "R$ 0.00",
                         "",
                         If(
-                            Value(ValorDataCard.Text) > 200,
+                            Value(ValorNumberType.Text) > 200,
                             "Pendente",
                             "Aprovado"
                         )
                     )
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.View
                 Height: =70
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
