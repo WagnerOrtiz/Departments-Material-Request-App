@@ -120,7 +120,7 @@ Requests As screen:
                 Text: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
-                X: =30
+                X: =21
                 Y: =30
                 ZIndex: =1
 
@@ -194,20 +194,24 @@ Requests As screen:
 
             DataCardKey18 As label:
                 AutoHeight: =true
+                Color: =White
                 Height: =48
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Requisitou para"
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue8.Height / 2) - (Self.Height / 2)
+                X: =21
+                Y: =21
                 ZIndex: =1
 
             DataCardValue8 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(0, 0, 0, 0)
+                ChevronFill: |
+                    =White
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["DisplayName","Email","Picture"]
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =If(UsoProprioDataCard, Disabled,DisplayMode.Edit)
                 Height: =70
                 Items: =Choices([@ListaRequisicao].RequisitouPara)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -217,8 +221,8 @@ Requests As screen:
                 Size: =21
                 Template: =ListItemTemplate.Person
                 Tooltip: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.6
-                X: =DataCardKey18.X + DataCardKey18.Width
+                Width: =(Parent.Width - 60) * 0.63
+                X: =244
                 Y: =10
                 ZIndex: =2
 
@@ -273,8 +277,8 @@ Requests As screen:
                 Text: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue9.Height / 2) - (Self.Height / 2)
+                X: =21
+                Y: =21
                 ZIndex: =1
 
             DataCardValue9 As text:
@@ -347,8 +351,8 @@ Requests As screen:
                 Text: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
-                X: =30
-                Y: =10 + (PrioridadeDataCard.Height / 2) - (Self.Height / 2)
+                X: =21
+                Y: =21
                 ZIndex: =1
 
             PrioridadeDataCard As combobox:
@@ -420,7 +424,7 @@ Requests As screen:
                 Text: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
-                X: =30
+                X: =21
                 Y: =10 + (UsoProprioDataCard.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
@@ -432,7 +436,7 @@ Requests As screen:
                 FalseFill: =RGBA(153, 153, 153, 1)
                 FalseText: ="Off"
                 Height: =43
-                OnChange: =Reset(RequisitouParaDataCard)
+                OnChange: =Reset(DataCardValue8)
                 ShowLabel: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -502,7 +506,7 @@ Requests As screen:
                 Text: ="Data retirada"
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
-                X: =30
+                X: =21
                 Y: =20
                 ZIndex: =1
 
@@ -559,8 +563,8 @@ Requests As screen:
                 Text: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
-                X: =30
-                Y: =10 + (QuantidadeDataCard.Height / 2) - (Self.Height / 2)
+                X: =21
+                Y: =21
                 ZIndex: =1
 
             QuantidadeDataCard As text:
@@ -632,8 +636,8 @@ Requests As screen:
                 Text: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
-                X: =30
-                Y: =10 + (ValorDataCard.Height / 2) - (Self.Height / 2)
+                X: =21
+                Y: =21
                 ZIndex: =1
 
             ValorDataCard As text:
@@ -706,13 +710,13 @@ Requests As screen:
                 Text: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
-                X: =30
-                Y: =10 + (StatusDataCard.Height / 2) - (Self.Height / 2)
+                X: =21
+                Y: =21
                 ZIndex: =1
 
             StatusDataCard As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =If(Value(ValorDataCard.Text) > 200
+                Default: =If(Value(ValorDataCard.Text) > 200, "Pendente", "Aprovado")
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
