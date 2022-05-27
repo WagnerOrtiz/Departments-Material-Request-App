@@ -402,88 +402,6 @@ Requests As screen:
                 Y: =DataCardKey3.Y
                 ZIndex: =4
 
-        UsoProprio_Box As typedDataCard.toggleEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="UsoProprio"
-            Default: =ThisItem.UsoProprio
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@ListaRequisicao],DataSourceInfo.DisplayName,"UsoProprio")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =UsoProprioDataCard.Value
-            Width: =640
-            X: =0
-            Y: =6
-            ZIndex: =18
-
-            DataCardKey4 As label:
-                AutoHeight: =true
-                Color: =RGBA(255, 255, 255, 1)
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =21
-                Y: =10 + (UsoProprioDataCard.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            UsoProprioDataCard As toggleSwitch:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DisabledBorderColor: =RGBA(255, 255, 255, 1)
-                DisplayMode: =Parent.DisplayMode
-                FalseFill: =RGBA(153, 153, 153, 1)
-                FalseText: ="Off"
-                Height: =43
-                OnChange: =Reset(DataCardValue8)
-                ShowLabel: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                TrueFill: =RGBA(109, 49, 162, 1)
-                Width: =154
-                X: =242
-                Y: =12
-                ZIndex: =2
-
-            ErrorMessage4 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =UsoProprioDataCard.Y + UsoProprioDataCard.Height
-                ZIndex: =3
-
-            StarVisible4 As label:
-                Align: =Align.Center
-                Height: =DataCardKey4.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey4.Y
-                ZIndex: =4
-
-            SimOuNao_Label As label:
-                Color: =DimGrey
-                Height: =34
-                Size: =21
-                Text: =If(UsoProprioDataCard.Value = true, "Sim", "Não")
-                Width: =69
-                X: =345
-                Y: =15
-                ZIndex: =5
-
         DataPrevistaRetirada_Box As typedDataCard.dateTimeEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="DataPrevistaRetirada"
@@ -650,7 +568,7 @@ Requests As screen:
                 Height: =60  
                 HintText: |-
                     =If(
-                        QuantidadeDataCard.Text = "",
+                        QuantidadeDataCard.Text = "" || QuantidadeDataCard.Text = "0",
                         "R$ 0,00",
                         Text(
                             Value(
@@ -742,7 +660,7 @@ Requests As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: |-
                     =If(
-                        ValorDataCard.HintText = "R$ 0.00",
+                        ValorDataCard.HintText = "R$ 0,00",
                         "",
                         If(
                             Value(ValorNumberType.Text) > 200,
@@ -792,6 +710,88 @@ Requests As screen:
                 Wrap: =false
                 Y: =DataCardKey2.Y
                 ZIndex: =4
+
+        UsoProprio_Box As typedDataCard.toggleEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="UsoProprio"
+            Default: =ThisItem.UsoProprio
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@ListaRequisicao],DataSourceInfo.DisplayName,"UsoProprio")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =UsoProprioDataCard.Value
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =18
+
+            DataCardKey4 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =21
+                Y: =10 + (UsoProprioDataCard.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            UsoProprioDataCard As toggleSwitch:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DisabledBorderColor: =RGBA(255, 255, 255, 1)
+                DisplayMode: =Parent.DisplayMode
+                FalseFill: =RGBA(153, 153, 153, 1)
+                FalseText: ="Off"
+                Height: =43
+                OnChange: =Reset(DataCardValue8)
+                ShowLabel: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                TrueFill: =RGBA(109, 49, 162, 1)
+                Width: =154
+                X: =242
+                Y: =12
+                ZIndex: =2
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =UsoProprioDataCard.Y + UsoProprioDataCard.Height
+                ZIndex: =3
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                Height: =DataCardKey4.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey4.Y
+                ZIndex: =4
+
+            SimOuNao_Label As label:
+                Color: =DimGrey
+                Height: =34
+                Size: =21
+                Text: =If(UsoProprioDataCard.Value = true, "Sim", "Não")
+                Width: =69
+                X: =345
+                Y: =15
+                ZIndex: =5
 
     Button2 As button:
         Fill: =RGBA(109, 49, 162, 1)

@@ -3572,7 +3572,7 @@
       "LayoutName": "horizontal",
       "MetaDataIDKey": "",
       "Name": "DataPrevistaRetirada_Box",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8752,7 +8752,7 @@
       "LayoutName": "horizontal",
       "MetaDataIDKey": "",
       "Name": "Quantidade_Box",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9402,7 +9402,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RequisitouPara_Box",
-      "ParentIndex": 3,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12835,7 +12835,7 @@
       "LayoutName": "horizontal",
       "MetaDataIDKey": "",
       "Name": "Status_Box",
-      "ParentIndex": 7,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13599,7 +13599,7 @@
       "LayoutName": "horizontal",
       "MetaDataIDKey": "",
       "Name": "UsoProprio_Box",
-      "ParentIndex": 2,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14640,7 +14640,7 @@
       "LayoutName": "horizontal",
       "MetaDataIDKey": "",
       "Name": "ValorTotal_Box",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
