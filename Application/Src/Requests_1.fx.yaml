@@ -6,6 +6,7 @@ Requests_1 As screen:
         BorderColor: =RGBA(109,49,162,1)
         Fill: =RGBA(109, 49, 162, 1)
         Height: =60
+        HoverFill: =ColorFade(RGBA(109, 49, 162, 1), -20%)
         OnSelect: |-
             =If(
                 MaterialDataCard_2.Selected.Value = Blank(),
@@ -17,9 +18,18 @@ Requests_1 As screen:
                         Value(DataDifference.Text)<0,
                         Set(varError, "Selecione uma data no futuro"),
                         If(
-                            Or(QuantidadeDataCard_2.Text = "0", QuantidadeDataCard_2.Text = ""),
+                            Or(QuantidadeDataCard_2.Text = "0", IsBlank(QuantidadeDataCard_2.Text)),
                             Set(varError, "Quantidade inválida"),
-                            Notify("Requisição enviada com sucesso!!",NotificationType.Success)  
+                            If(
+                                UsoProprioDataCard_2.Value = false,
+                                If(
+                                    RequisitouParaDataCard_2.Selected.Email <> User().Email,
+                                    Set(varError, "Requisite para alguém válido"),
+                                    Notify("Requisição enviada com sucesso!!",NotificationType.Success) 
+                                ),
+                                    Set(varError, "");
+                                    Notify("Requisição enviada com sucesso!!",NotificationType.Success)                     
+                            )
                         )
                     )
                 )
@@ -28,7 +38,7 @@ Requests_1 As screen:
         Text: ="Requisitar"
         Width: =217
         X: =205
-        Y: =929
+        Y: =916
         ZIndex: =5
 
     Icon3_1 As icon.Add:
@@ -488,6 +498,7 @@ Requests_1 As screen:
             Height: =48
             Size: =21
             Text: ="Requisitou para"
+            Visible: =If(UsoProprioDataCard_2.Value = true, false, true)
             Width: =(Parent.Width - 60) * 0.4
             Wrap: =false
             X: =26
@@ -499,14 +510,20 @@ Requests_1 As screen:
             BorderThickness: =1
             ChevronBackground: =RGBA(0, 0, 0, 0)
             ChevronDisabledBackground: =RGBA(0, 0, 0, 0)
+            ChevronDisabledFill: =RGBA(0, 0, 0, 0)
             ChevronFill: =RGBA(0, 0, 0, 0)
             DefaultSelectedItems: =
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(179, 179, 179, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
             DisplayFields: =["DisplayName","Email","Picture"]
             DisplayMode: =If(UsoProprioDataCard_2, Disabled,DisplayMode.Edit)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =60
             HoverBorderColor: =RGBA(109,49,162,1)
-            InputTextPlaceholder: =""
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            InputTextPlaceholder: =
             Items: =Choices([@ListaRequisicao].RequisitouPara)
             OnChange: =
             PaddingLeft: |
@@ -517,6 +534,7 @@ Requests_1 As screen:
             Size: =21
             Template: =ListItemTemplate.Person
             Tooltip: =
+            Visible: =If(UsoProprioDataCard_2.Value = true, false, true)
             Width: =(Parent.Width - 60) * 0.63
             X: =249
             Y: =734
@@ -525,6 +543,7 @@ Requests_1 As screen:
     ErrorLabel As label:
         Align: =Align.Center
         Color: =RGBA(255, 0, 0, 1)
+        FocusedBorderColor: =RGBA(109, 49, 162, 1)
         Height: =70
         Size: =21
         Text: =varError
@@ -580,4 +599,14 @@ Requests_1 As screen:
             X: =88
             Y: =368
             ZIndex: =25
+
+    Label2 As label:
+        Color: =RGBA(255, 191, 0, 1)
+        Height: =70
+        Size: =21
+        Text: ="Falta o PATCH no botão"
+        Width: =560
+        X: =33
+        Y: =969
+        ZIndex: =31
 
