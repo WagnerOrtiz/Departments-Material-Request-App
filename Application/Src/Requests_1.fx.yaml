@@ -17,12 +17,12 @@ Requests_1 As screen:
                         Value(DataDifference.Text)<0,
                         Set(varError, "Selecione uma data no futuro"),
                         If(
-                            QuantidadeDataCard_2.Text = "0" || QuantidadeDataCard_2.Text = "",
-                            Set(varError, "Quantidade inválida")   
+                            Or(QuantidadeDataCard_2.Text = "0", QuantidadeDataCard_2.Text = ""),
+                            Set(varError, "Quantidade inválida"),
+                            Notify("Requisição enviada com sucesso!!",NotificationType.Success)  
                         )
                     )
-                ),
-                Notify("Requisição enviada com sucesso!!",NotificationType.Success)
+                )
             )
         Size: =21
         Text: ="Requisitar"
