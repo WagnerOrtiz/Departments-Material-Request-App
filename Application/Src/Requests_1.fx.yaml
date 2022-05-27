@@ -1,6 +1,6 @@
 Requests_1 As screen:
     Fill: =If(dark, RGBA(31, 29, 29, 1), White)
-    OnVisible: =
+    OnVisible: =Set(varError, "")
 
     Button2_1 As button:
         BorderColor: =RGBA(109,49,162,1)
@@ -9,15 +9,20 @@ Requests_1 As screen:
         OnSelect: |-
             =If(
                 MaterialDataCard_2.Selected.Value = Blank(),
-                Set(Error, "Selecione um Material"),
+                Set(varError, "Selecione um Material"),
                 If(
-                    DataDifference.Text<0,
-                    Set(Error, "Selecione uma data no futuro")
+                    PrioridadeDataCard_2.Selected.Value = Blank(),
+                    Set(varError, "Indique a prioridade"),
                     If(
-                        QuantidadeDataCard_2.Text = "0" || QuantidadeDataCard_2.Text = "",
-                        Set(Error, "Quantidade inválida")   
+                        Value(DataDifference.Text)<0,
+                        Set(varError, "Selecione uma data no futuro"),
+                        If(
+                            QuantidadeDataCard_2.Text = "0" || QuantidadeDataCard_2.Text = "",
+                            Set(varError, "Quantidade inválida")   
+                        )
                     )
-                )
+                ),
+                Notify("Requisição enviada com sucesso!!",NotificationType.Success)
             )
         Size: =21
         Text: ="Requisitar"
@@ -516,6 +521,16 @@ Requests_1 As screen:
             X: =249
             Y: =734
             ZIndex: =4
+
+    ErrorLabel As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 0, 0, 1)
+        Height: =70
+        Size: =21
+        Text: =varError
+        Width: =640
+        Y: =859
+        ZIndex: =30
 
     DateGroup As group:
         Height: =5
