@@ -102,6 +102,7 @@
     "LoginScreen",
     "CreateLoginScreen",
     "Dashboard",
-    "Requests"
+    "Requests",
+    "Requests_1"
   ]
 }

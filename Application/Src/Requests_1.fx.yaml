@@ -1,0 +1,568 @@
+Requests_1 As screen:
+    Fill: =If(dark, RGBA(31, 29, 29, 1), White)
+    OnVisible: =
+
+    Button2_1 As button:
+        BorderColor: =RGBA(109,49,162,1)
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =60
+        OnSelect: |-
+            =If(
+                MaterialDataCard_2.Selected.Value = Blank(),
+                Set(Error, "Selecione um Material"),
+                If(
+                    DataDifference.Text<0,
+                    Set(Error, "Selecione uma data no futuro")
+                    If(
+                        QuantidadeDataCard_2.Text = "0" || QuantidadeDataCard_2.Text = "",
+                        Set(Error, "Quantidade inválida")   
+                    )
+                )
+            )
+        Size: =21
+        Text: ="Requisitar"
+        Width: =217
+        X: =205
+        Y: =929
+        ZIndex: =5
+
+    Icon3_1 As icon.Add:
+        Color: =RGBA(109, 49, 162, 1)
+        Height: =55
+        Icon: =Icon.Reload
+        OnSelect: =
+        Width: =55
+        X: =541
+        Y: =23
+        ZIndex: =6
+
+    backGround_4 As button:
+        DisabledBorderColor: =RGBA(56, 52, 52, 1)
+        DisabledFill: =RGBA(56, 52, 52, 1)
+        Fill: =RGBA(135, 127, 127, 1)
+        Height: =100
+        HoverBorderColor: =RGBA(56, 52, 52, 1)
+        HoverFill: =RGBA(56, 52, 52, 1)
+        PressedFill: =RGBA(56, 52, 52, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: =""
+        Width: =640
+        ZIndex: =23
+
+    Icon1_3 As icon.CheckBadge:
+        Color: =RGBA(109, 49, 162, 1)
+        Height: =55
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        Width: =55
+        X: =22
+        Y: =23
+        ZIndex: =26
+
+    Label4_2 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =100
+        Size: =23
+        Text: ="Fazer Requisição"
+        Width: =267
+        X: =197
+        ZIndex: =27
+
+    NavBar_2 As gallery.galleryHorizontal:
+        Height: =94
+        Items: |-
+            =Table({Status: "Credenciamento"},{Status: "Dashboard"},{Status: "Configurações"})
+        ShowScrollbar: =false
+        TemplateSize: =213
+        Y: =1039
+        ZIndex: =28
+
+        LabelsNavBar_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 0, 1)
+            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
+            FontWeight: =FontWeight.Semibold
+            Height: =43
+            Size: =15
+            Text: =ThisItem.Status
+            Width: =198
+            Y: =41
+            ZIndex: =1
+
+        UnderlineNavBar_2 As button:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            Fill: =RGBA(109, 49, 162, 1)
+            Height: =0
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: =""
+            Visible: =If(ThisItem.IsSelected,true,false)
+            Width: =LabelsNavBar_2.Width
+            ZIndex: =2
+
+        Icon5_2 As icon.Add:
+            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162,1), RGBA(255,255,255,1))
+            Height: =30
+            Icon: |-
+                =Switch(
+                    ThisItem.Status,
+                    "Credenciamento",
+                    Icon.Home,
+                    "Dashboard",
+                    Icon.ListScrollWatchlist,
+                    "Configurações",
+                    Icon.Settings
+                )
+            OnSelect: =Select(Parent)
+            Width: =44
+            X: =77
+            Y: =11
+            ZIndex: =5
+
+    Icon1_4 As icon.CheckBadge:
+        Color: =RGBA(109, 49, 162, 1)
+        Height: =55
+        Icon: =Icon.Reload
+        OnSelect: =Reset(MaterialDataCard_2); Reset(PrioridadeDataCard_2); Reset(DataRetiradaDataCard_2); Reset(QuantidadeDataCard_2);Reset(ValorDataCard_2);Reset(StatusDataCard_2);Reset(UsoProprioDataCard_2);Reset(RequisitouParaDataCard_2)
+        Width: =55
+        X: =550
+        Y: =23
+        ZIndex: =29
+
+    MaterialGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =29
+
+        DataCardKeyLabel As label:
+            AutoHeight: =true
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =48
+            Size: =21
+            Text: ="Material"
+            Width: =(Parent.Width - 60) * 0.4
+            Wrap: =false
+            X: =24
+            Y: =164
+            ZIndex: =9
+
+        MaterialDataCard_2 As combobox:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(109, 49, 162, 1)
+            ChevronHoverBackground: =RGBA(109, 49, 162, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DefaultSelectedItems: =
+            DisplayFields: =["Value"]
+            DisplayMode: =
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =60
+            Items: =Choices([@ListaRequisicao].Material)
+            PaddingLeft: =10
+            SearchFields: =["Value"]
+            SearchItems: =Choices(ListaRequisicao.Material,MaterialDataCard_2.SearchText)
+            SelectMultiple: =false
+            Size: =21
+            Tooltip: =
+            Width: =254
+            X: =239
+            Y: =159
+            ZIndex: =10
+
+        Photo As image:
+            Height: =94
+            Image: =LookUp('Lista de Materiais',NomeMaterial=MaterialDataCard_2.Selected.Value,ImagemMaterial)
+            Width: =102
+            X: =504
+            Y: =145
+            ZIndex: =22
+
+    PrioridadeGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =29
+
+        DataCardKey3_2 As label:
+            AutoHeight: =true
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            Height: =48
+            Size: =21
+            Text: ="Prioridade"
+            Width: =(Parent.Width - 60) * 0.4
+            Wrap: =false
+            X: =23
+            Y: =273
+            ZIndex: =20
+
+        PrioridadeDataCard_2 As combobox:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(109, 49, 162, 1)
+            ChevronHoverBackground: =RGBA(109,49,162,1)
+            Color: =RGBA(255, 255, 255, 1)
+            DefaultSelectedItems: =
+            DisplayFields: =["Value"]
+            DisplayMode: =
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =60
+            Items: =Choices([@ListaRequisicao].Prioridade)
+            PaddingLeft: =10
+            SearchFields: =["Value"]
+            SearchItems: =Choices(ListaRequisicao.Prioridade,PrioridadeDataCard_2.SearchText)
+            SelectMultiple: =false
+            Size: =21
+            Tooltip: =
+            Width: =(Parent.Width - 60) * 0.63
+            X: =238
+            Y: =268
+            ZIndex: =21
+
+    RequestedByGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =29
+
+        DataCardKey10_2 As label:
+            AutoHeight: =true
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =48
+            Size: =21
+            Text: ="Solicitante"
+            Visible: =false
+            Width: =231
+            Wrap: =false
+            X: =22
+            Y: =831
+            ZIndex: =1
+
+        SolicitanteInput_2 As text:
+            BorderColor: =
+            Default: =LookUp(Usuarios, Email = emailInput.Text, Nome)
+            DelayOutput: =true
+            DisplayMode: =
+            Height: =46
+            PaddingLeft: =5
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =21
+            Tooltip: =
+            Visible: =false
+            Width: =348
+            X: =254
+            Y: =834
+            ZIndex: =2
+
+    QuantityGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =29
+
+        DataCardKey8_2 As label:
+            AutoHeight: =true
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =48
+            Size: =21
+            Text: ="Quantidade"
+            Width: =(Parent.Width - 60) * 0.4
+            Wrap: =false
+            X: =26
+            Y: =431
+            ZIndex: =7
+
+        QuantidadeDataCard_2 As text:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            BorderThickness: =1
+            Color: =RGBA(109,49,162,1)
+            Default: =
+            DelayOutput: =true
+            DisplayMode: =
+            Fill: =RGBA(0, 0, 0, 0)
+            Format: =TextFormat.Number
+            Height: =60  
+            HoverBorderColor: =RGBA(109, 49, 162, 1)
+            PaddingLeft: =5
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =21
+            Tooltip: =
+            Width: =361
+            X: =242
+            Y: =430
+            ZIndex: =8
+
+    StatusGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =29
+
+        DataCardKey2_2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =39
+            Size: =21
+            Text: ="Status"
+            Width: =190
+            Wrap: =false
+            X: =27
+            Y: =594
+            ZIndex: =13
+
+        StatusDataCard_2 As text:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            BorderThickness: =0
+            Default: |-
+                =If(
+                    ValorDataCard_2.HintText = "R$ 0",
+                    "",
+                    If(
+                        Value(ValorNumberType_2.Text) > 200,
+                        "Pendente",
+                        "Aprovado"
+                    )
+                )
+            DelayOutput: =true
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =Disabled
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =60  
+            HoverBorderColor: =RGBA(109, 49, 162, 1)
+            PaddingLeft: =10
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =21
+            Tooltip: =
+            Width: =(Parent.Width - 60) * 0.63
+            X: =242
+            Y: =587
+            ZIndex: =17
+
+    OwnUseGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =29
+
+        DataCardKey4_2 As label:
+            AutoHeight: =true
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =48
+            Size: =21
+            Text: ="Uso próprio"
+            Width: =(Parent.Width - 60) * 0.4
+            Wrap: =false
+            X: =31
+            Y: =661
+            ZIndex: =14
+
+        UsoProprioDataCard_2 As toggleSwitch:
+            BorderColor: =
+            Default: =
+            DisabledBorderColor: =RGBA(255, 255, 255, 1)
+            DisplayMode: =
+            FalseFill: =RGBA(153, 153, 153, 1)
+            FalseText: ="Off"
+            Height: =43
+            OnChange: =Reset(RequisitouParaDataCard_2)
+            ShowLabel: =false
+            Size: =21
+            Tooltip: =
+            TrueFill: =RGBA(109, 49, 162, 1)
+            Width: =154
+            X: =252
+            Y: =666
+            ZIndex: =15
+
+        SimOuNao_Label_2 As label:
+            Color: =DimGrey
+            Height: =34
+            Size: =21
+            Text: =If(UsoProprioDataCard_2.Value = true, "Sim", "Não")
+            Width: =69
+            X: =355
+            Y: =669
+            ZIndex: =16
+
+    TotalGroup As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =29
+
+        DataCardKey7_2 As label:
+            AutoHeight: =true
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =48
+            Size: =21
+            Text: ="Valor total"
+            Width: =(Parent.Width - 60) * 0.4
+            Wrap: =false
+            X: =26
+            Y: =516
+            ZIndex: =11
+
+        ValorDataCard_2 As text:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            BorderThickness: =0
+            Default: =
+            DelayOutput: =true
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(0, 0, 0, 0)
+            Format: =TextFormat.Number
+            Height: =48
+            HintText: |-
+                =If(
+                    QuantidadeDataCard_2.Text = "" || QuantidadeDataCard_2.Text = "0",
+                    "R$ 0",
+                    Text(
+                        Value(
+                            LookUp(
+                                'Lista de Materiais',
+                                NomeMaterial = MaterialDataCard_2.Selected.Value, Valor
+                            )
+                        ) * QuantidadeDataCard_2.Text,
+                        "R$ #,##0.00"
+                    )
+                )
+            HoverBorderColor: =RGBA(109, 49, 162, 1)
+            PaddingLeft: =10
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =21
+            Tooltip: =
+            Width: =(Parent.Width - 60) * 0.63
+            X: =242
+            Y: =516
+            ZIndex: =12
+
+        ValorNumberType_2 As label:
+            Color: =RGBA(255, 255, 0, 1)
+            Height: =30
+            Size: =15
+            Text: =LookUp('Lista de Materiais',NomeMaterial = MaterialDataCard_2.Selected.Value, Valor) * QuantidadeDataCard_2
+            Width: =76
+            X: =520
+            Y: =517
+            ZIndex: =24
+
+    RequestedToGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =29
+
+        DataCardKey18_2 As label:
+            AutoHeight: =true
+            Color: =White
+            Height: =48
+            Size: =21
+            Text: ="Requisitou para"
+            Width: =(Parent.Width - 60) * 0.4
+            Wrap: =false
+            X: =26
+            Y: =743
+            ZIndex: =3
+
+        RequisitouParaDataCard_2 As combobox:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(0, 0, 0, 0)
+            ChevronDisabledBackground: =RGBA(0, 0, 0, 0)
+            ChevronFill: =RGBA(0, 0, 0, 0)
+            DefaultSelectedItems: =
+            DisplayFields: =["DisplayName","Email","Picture"]
+            DisplayMode: =If(UsoProprioDataCard_2, Disabled,DisplayMode.Edit)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =60
+            HoverBorderColor: =RGBA(109,49,162,1)
+            InputTextPlaceholder: =""
+            Items: =Choices([@ListaRequisicao].RequisitouPara)
+            OnChange: =
+            PaddingLeft: |
+                =10
+            SearchFields: =["DisplayName"]
+            SearchItems: =Choices(ListaRequisicao.RequisitouPara,RequisitouParaDataCard_2.SearchText)
+            SelectMultiple: =false
+            Size: =21
+            Template: =ListItemTemplate.Person
+            Tooltip: =
+            Width: =(Parent.Width - 60) * 0.63
+            X: =249
+            Y: =734
+            ZIndex: =4
+
+    DateGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =30
+
+        DataCardKey6_2 As label:
+            AutoHeight: =true
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =48
+            Size: =21
+            Text: ="Data retirada"
+            Width: =229
+            Wrap: =false
+            X: =24
+            Y: =351
+            ZIndex: =18
+
+        DataRetiradaDataCard_2 As datepicker:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            DisplayMode: =
+            EndYear: =Year(Today())+100
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =60
+            IconBackground: =RGBA(109, 49, 162, 1)
+            IsEditable: =true
+            PaddingBottom: =0
+            PaddingLeft: =10  
+            Size: =24
+            StartYear: =1899
+            Tooltip: =
+            Width: =361
+            X: =242
+            Y: =351
+            ZIndex: =19
+
+        DataDifference As label:
+            Color: =RGBA(152, 208, 70, 1)
+            Height: =62
+            Size: =21
+            Text: =DateDiff(Today(),DataRetiradaDataCard_2.SelectedDate,Days)
+            Width: =68
+            X: =88
+            Y: =368
+            ZIndex: =25
+
