@@ -27,17 +27,17 @@ Dashboard As screen:
         Width: =55
         X: =22
         Y: =23
-        ZIndex: =12
+        ZIndex: =2
 
     Label4 As label:
         FontWeight: =FontWeight.Bold
         Height: =70
         Size: =23
         Text: ="Olá, " & LookUp(Usuarios,Email = emailInput.Text, Nome)
-        Width: =483
-        X: =125
+        Width: =400
+        X: =107
         Y: =20
-        ZIndex: =13
+        ZIndex: =3
 
     FiltersLabel As gallery.galleryHorizontal:
         Height: =58
@@ -45,8 +45,8 @@ Dashboard As screen:
             =Table({Status: "Pendentes"},{Status: "Aprovados"},{Status: "Reprovados"},{Status: "Entregues"})
         ShowScrollbar: =false
         TemplateSize: =(Dashboard.Width)/4.2
-        Y: =119
-        ZIndex: =14
+        Y: =106
+        ZIndex: =4
 
         Labels As label:
             Align: =Align.Center
@@ -74,15 +74,15 @@ Dashboard As screen:
 
     "MaterialsDashBoard As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 0, 0, 0)
-        Height: =658
+        Height: =714
         Items: =ListaRequisicao
         ShowNavigation: =true
         ShowScrollbar: =false
         TemplatePadding: =10
         TemplateSize: =App.Width/3.3
         WrapCount: =3
-        Y: =313
-        ZIndex: =15
+        Y: =281
+        ZIndex: =5
 
         Image2 As image:
             Height: =155
@@ -115,7 +115,7 @@ Dashboard As screen:
         ShowScrollbar: =false
         TemplateSize: =213
         Y: =1028
-        ZIndex: =16
+        ZIndex: =6
 
         LabelsNavBar As label:
             Align: =Align.Center
@@ -165,12 +165,12 @@ Dashboard As screen:
         Default: =""
         DisabledColor: =RGBA(255, 255, 255, 1)
         Fill: =If(dark, RGBA(31, 29, 29, 1), White)
-        Height: =70
+        Height: =67
         HintText: ="Nº requisição"
         HoverBorderColor: =RGBA(153, 153, 153, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
-        PaddingLeft: =90
+        PaddingLeft: =100
         RadiusBottomLeft: =40
         RadiusBottomRight: =40
         RadiusTopLeft: =40
@@ -178,25 +178,26 @@ Dashboard As screen:
         Size: =21
         Width: =560
         X: =48
-        Y: =206
-        ZIndex: =17
+        Y: =192
+        ZIndex: =7
 
     Icon6 As icon.Search:
         Color: =White
         Height: =51
         Icon: =Icon.Search
         Width: =40
-        X: =77
-        Y: =216
-        ZIndex: =18
+        X: =85
+        Y: =199
+        ZIndex: =8
 
     Icon2 As icon.Add:
-        Color: =RGBA(109, 49, 162, 1)
-        Height: =116
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(152, 208, 70, 1)
+        Height: =98
         Icon: =Icon.Add
         OnSelect: =ResetForm(RequestForm);NewForm(RequestForm);Navigate(Requests_Backup_WithForm)
-        Width: =109
-        X: =499
-        Y: =889
-        ZIndex: =20
+        Width: =83
+        X: =534
+        Y: =2
+        ZIndex: =10
 
