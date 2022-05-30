@@ -76,7 +76,11 @@ Dashboard As screen:
         BorderColor: =RGBA(0, 0, 0, 0)
         Default: ={}
         Height: =777
-        Items: =ListaRequisicao
+        Items: |-
+            =Filter(
+                ListaRequisicao,
+                Status = FiltersLabel.Selected.Status
+            )
         ShowNavigation: =true
         ShowScrollbar: =false
         TemplatePadding: =10
