@@ -42,7 +42,7 @@ Dashboard As screen:
     FiltersLabel As gallery.galleryHorizontal:
         Height: =58
         Items: |-
-            =Table({Status: "Pendentes"},{Status: "Aprovados"},{Status: "Reprovados"},{Status: "Entregues"})
+            =Table({Status: "Pendente"},{Status: "Aprovado"},{Status: "Reprovado"},{Status: "Entregue"})
         ShowScrollbar: =false
         TemplateSize: =(Dashboard.Width)/4.2
         Y: =106
