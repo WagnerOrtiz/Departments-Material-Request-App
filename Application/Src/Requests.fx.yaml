@@ -188,6 +188,7 @@ Requests As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue8.Selected
+            Visible: =If(UsoProprioDataCard_2.Value = false, true, false)
             Width: =640
             X: =0
             Y: =7
@@ -436,6 +437,7 @@ Requests As screen:
             DataRetiradaDataCard As datepicker:
                 BorderColor: =RGBA(109,49,162,1)
                 Color: =RGBA(109, 49, 162, 1)
+                DefaultDate: =Text(Today())
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
                 Height: =60
