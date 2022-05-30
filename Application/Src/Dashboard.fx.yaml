@@ -75,20 +75,7 @@ Dashboard As screen:
     "MaterialsDashBoard As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 0, 0, 0)
         Height: =658
-        Items: |-
-            =If(
-                IsBlank(numRequisicaoInput.Text),
-                LookUp(
-                    ListaRequisicao,
-                    Status = FiltersLabel.Selected.Labels.Text,
-                    ThisRecord
-                ),
-                LookUp(
-                    ListaRequisicao.ID,
-                    ID = numRequisicaoInput.Text,
-                    ThisRecord
-                )
-            )
+        Items: =ListaRequisicao
         ShowNavigation: =true
         ShowScrollbar: =false
         TemplatePadding: =10
@@ -99,6 +86,7 @@ Dashboard As screen:
 
         Image2 As image:
             Height: =155
+            Image: =LookUp('Lista de Materiais', NomeMaterial = ThisItem.Material.Value,ImagemMaterial)
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth - 32
             X: =16
@@ -113,7 +101,7 @@ Dashboard As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.ID
+            Text: =ThisItem.Material.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =128
             X: =21
@@ -202,21 +190,11 @@ Dashboard As screen:
         Y: =216
         ZIndex: =18
 
-    Label1 As label:
-        Color: =RGBA(255, 255, 0, 1)
-        Height: =70
-        Size: =21
-        Text: ="FALTA AJUSTAR ALGUMAS COISAS"
-        Width: =560
-        X: =80
-        Y: =678
-        ZIndex: =19
-
     Icon2 As icon.Add:
         Color: =RGBA(109, 49, 162, 1)
         Height: =116
         Icon: =Icon.Add
-        OnSelect: =ResetForm(RequestForm);NewForm(RequestForm);Navigate(Requests)
+        OnSelect: =ResetForm(RequestForm);NewForm(RequestForm);Navigate(Requests_Backup_WithForm)
         Width: =109
         X: =499
         Y: =889
