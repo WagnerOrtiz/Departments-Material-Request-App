@@ -74,14 +74,15 @@ Dashboard As screen:
 
     "MaterialsDashBoard As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 0, 0, 0)
-        Height: =714
+        Default: ={}
+        Height: =777
         Items: =ListaRequisicao
         ShowNavigation: =true
         ShowScrollbar: =false
         TemplatePadding: =10
-        TemplateSize: =App.Width/3.3
+        TemplateSize: =193
         WrapCount: =3
-        Y: =281
+        Y: =241
         ZIndex: =5
 
         Image2 As image:
@@ -90,7 +91,7 @@ Dashboard As screen:
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth - 32
             X: =16
-            Y: =10
+            Y: =18
             ZIndex: =1
 
         Subtitle2 As label:
@@ -105,8 +106,29 @@ Dashboard As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =128
             X: =21
-            Y: =170
+            Y: =177
             ZIndex: =3
+
+        Label1 As label:
+            Color: =If(ThisItem.Prioridade.Value = "Alta", Yellow, RGBA(255, 255, 255, 1))
+            Height: =25
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: =ThisItem.Prioridade.Value
+            Width: =166
+            X: =15
+            Y: =202
+            ZIndex: =4
+
+        Rectangle1 As rectangle:
+            BorderColor: =If(ThisItem.IsSelected, RGBA(109,49,162,1), RGBA(0,0,0,0))
+            BorderThickness: =4
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =223
+            OnSelect: =Select(Parent)
+            Width: =190
+            Y: =10
+            ZIndex: =5
 
     NavBar As gallery.galleryHorizontal:
         Height: =106
@@ -165,7 +187,7 @@ Dashboard As screen:
         Default: =""
         DisabledColor: =RGBA(255, 255, 255, 1)
         Fill: =If(dark, RGBA(31, 29, 29, 1), White)
-        Height: =67
+        Height: =47
         HintText: ="Nº requisição"
         HoverBorderColor: =RGBA(153, 153, 153, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -183,11 +205,11 @@ Dashboard As screen:
 
     Icon6 As icon.Search:
         Color: =White
-        Height: =51
+        Height: =48
         Icon: =Icon.Search
         Width: =40
         X: =85
-        Y: =199
+        Y: =192
         ZIndex: =8
 
     Icon2 As icon.Add:
