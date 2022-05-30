@@ -2,7 +2,7 @@ Requests_1 As screen:
     Fill: =If(dark, RGBA(31, 29, 29, 1), White)
     OnVisible: =Set(varError, "")
 
-    Button2_1 As button:
+    RequestButton As button:
         BorderColor: =RGBA(109,49,162,1)
         Fill: =RGBA(109, 49, 162, 1)
         Height: =60
@@ -25,10 +25,36 @@ Requests_1 As screen:
                                 If(
                                     RequisitouParaDataCard_2.Selected.Email <> User().Email,
                                     Set(varError, "Requisite para alguém válido"),
+                                    Set(varError, "");
+                                    Patch(
+                                        ListaRequisicao,
+                                        Defaults(ListaRequisicao),
+                                        {
+                                            Material: MaterialDataCard_2.Selected ,
+                                            Prioridade: PrioridadeDataCard_2.Selected,
+                                            DataPrevistaRetirada: DataRetiradaDataCard_2.SelectedDate,
+                                            Quantidade: Value(QuantidadeDataCard_2.Text),
+                                            UsoProprio: UsoProprioDataCard_2.Value,
+                                            ValorTotal: Value(ValorNumberType_2.Text)
+                                        }
+                                    );
                                     Notify("Requisição enviada com sucesso!!",NotificationType.Success) 
                                 ),
                                     Set(varError, "");
-                                    Notify("Requisição enviada com sucesso!!",NotificationType.Success)                     
+                                Patch(
+                                    ListaRequisicao,
+                                    Defaults(ListaRequisicao),
+                                    {
+                                        Material: MaterialDataCard_2.Selected ,
+                                        Prioridade: PrioridadeDataCard_2.Selected,
+                                        DataPrevistaRetirada: DataRetiradaDataCard_2.SelectedDate,
+                                        Quantidade: Value(QuantidadeDataCard_2.Text),
+                                        UsoProprio: UsoProprioDataCard_2.Value,
+                                        ValorTotal: Value(ValorNumberType_2.Text)
+                                    }
+                                );
+                                Notify("Requisição enviada com sucesso!!",NotificationType.Success)
+                            )                   
                             )
                         )
                     )
