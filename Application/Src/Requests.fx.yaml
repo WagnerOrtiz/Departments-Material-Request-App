@@ -38,10 +38,12 @@ Requests As screen:
                                             Status: StatusDataCard_2.Text,
                                             RequisitouPara: RequisitouParaDataCard_2.Selected,
                                             ValorTotal: Value(ValorNumberType_2.Text),
-                                             Solicitante:SolicitanteInput_2.Text
+                                            Solicitante:SolicitanteInput_2.Text,
+                                            NumeroRequisicao: Last(ListaRequisicao).ID+1
                                         }
                                     );
-                                    Notify("Requisição enviada com sucesso!!",NotificationType.Success) 
+                                    Notify("Requisição enviada com sucesso!!",NotificationType.Success);
+                                    Navigate(Dashboard)
                                 ),
                                 Set(varError, "");
                                 Patch(
@@ -56,10 +58,12 @@ Requests As screen:
                                         Status: StatusDataCard_2.Text,
                                         RequisitouPara: RequisitouParaDataCard_2.Selected,
                                         ValorTotal: Value(ValorNumberType_2.Text),
-                                        Solicitante:SolicitanteInput_2.Text
+                                        Solicitante:SolicitanteInput_2.Text,
+                                        NumeroRequisicao: Last(ListaRequisicao).ID+1
                                     }
                                 );
-                                Notify("Requisição enviada com sucesso!!",NotificationType.Success)
+                                Notify("Requisição enviada com sucesso!!",NotificationType.Success);
+                                Navigate(Dashboard)
                             )                   
                         )
                     )

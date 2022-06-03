@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2022-04-12T16:42:28.6490000Z",
+      "LastChangedTimeString": "2022-05-31T16:20:03.8250000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -40,6 +40,7 @@
       "Modified": "Modified",
       "NomeEntregador": "NomeEntregador",
       "NomeEntregador#Claims": "NomeEntregador Claims",
+      "NumeroRequisicao": "NumeroRequisicao",
       "Prioridade": "Prioridade",
       "Prioridade#Id": "Prioridade Id",
       "Quantidade": "Quantidade",
