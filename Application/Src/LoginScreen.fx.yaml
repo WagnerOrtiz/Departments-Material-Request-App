@@ -1,6 +1,6 @@
 LoginScreen As screen:
     Fill: =If(dark, RGBA(31, 29, 29, 1), White)
-    OnVisible: =
+    OnVisible: =Reset(emailInput);Reset(passwordInput)
 
     backGround As button:
         DisabledBorderColor: =RGBA(56, 52, 52, 1)

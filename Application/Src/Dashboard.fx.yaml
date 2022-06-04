@@ -77,28 +77,44 @@ Dashboard As screen:
         Default: ={}
         Height: =777
         Items: |-
-            =Filter(
-                ListaRequisicao,
-                Status = FiltersLabel.Selected.Status
+            =If(
+                numRequisicaoInput.Text = "",
+                Filter(
+                    ListaRequisicao,
+                    Status = FiltersLabel.Selected.Status
+                ),
+               If(
+                    LookUp(
+                        ListaRequisicao,
+                        LookUp(
+                            'Lista de Materiais',
+                            Search('Lista de Materiais', NomeMaterial = numRequisicaoInput.Text),
+                            NomeMaterial
+                        ),
+                        Material
+                    ) = numRequisicaoInput.Text
+                ),
+                Search(
+                    ListaRequisicao, numRequisicaoInput.Text, "NumeroRequisicao"
+                ) 
             )
         ShowNavigation: =true
         ShowScrollbar: =false
         TemplatePadding: =10
         TemplateSize: =193
         WrapCount: =3
-        Y: =241
+        Y: =245
         ZIndex: =5
 
-        Image2 As image:
-            Height: =155
+        ImageDashboard As image:
+            Height: =121
             Image: =LookUp('Lista de Materiais', NomeMaterial = ThisItem.Material.Value,ImagemMaterial)
             OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth - 32
-            X: =16
+            Width: =181
             Y: =18
             ZIndex: =1
 
-        Subtitle2 As label:
+        MaterialDashboard As label:
             Color: =RGBA(255, 255, 255, 1)
             Height: =29
             OnSelect: =Select(Parent)
@@ -109,19 +125,19 @@ Dashboard As screen:
             Text: =ThisItem.Material.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =128
-            X: =21
-            Y: =177
+            X: =31
+            Y: =146
             ZIndex: =3
 
-        Label1 As label:
+        PrioridadeDashboard As label:
             Color: =If(ThisItem.Prioridade.Value = "Alta", Yellow, RGBA(255, 255, 255, 1))
             Height: =25
             OnSelect: =Select(Parent)
             Size: =15
             Text: =ThisItem.Prioridade.Value
             Width: =166
-            X: =15
-            Y: =202
+            X: =25
+            Y: =203
             ZIndex: =4
 
         Rectangle1 As rectangle:
@@ -133,6 +149,17 @@ Dashboard As screen:
             Width: =190
             Y: =10
             ZIndex: =5
+
+        NumReqDashboard As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =23
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: =ThisItem.NumeroRequisicao
+            Width: =166
+            X: =27
+            Y: =176
+            ZIndex: =6
 
     NavBar As gallery.galleryHorizontal:
         Height: =106
@@ -221,7 +248,7 @@ Dashboard As screen:
         Color: =RGBA(152, 208, 70, 1)
         Height: =98
         Icon: =Icon.Add
-        OnSelect: =ResetForm(RequestForm);NewForm(RequestForm);Navigate(Requests_Backup_WithForm)
+        OnSelect: =ResetForm(RequestForm);NewForm(RequestForm);Navigate(Requests)
         Width: =83
         X: =534
         Y: =2

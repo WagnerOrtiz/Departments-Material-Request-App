@@ -42,7 +42,7 @@ Requests As screen:
                                             NumeroRequisicao: Last(ListaRequisicao).ID+1
                                         }
                                     );
-                                    Notify("Requisição enviada com sucesso!!",NotificationType.Success);
+                                    Notify("Requisição enviada com sucesso!!",NotificationType.Success,2000);
                                     Navigate(Dashboard)
                                 ),
                                 Set(varError, "");
@@ -62,7 +62,7 @@ Requests As screen:
                                         NumeroRequisicao: Last(ListaRequisicao).ID+1
                                     }
                                 );
-                                Notify("Requisição enviada com sucesso!!",NotificationType.Success);
+                                Notify("Requisição enviada com sucesso!!",NotificationType.Success,2000);
                                 Navigate(Dashboard)
                             )                   
                         )
