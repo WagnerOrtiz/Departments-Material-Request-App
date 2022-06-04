@@ -83,20 +83,8 @@ Dashboard As screen:
                     ListaRequisicao,
                     Status = FiltersLabel.Selected.Status
                 ),
-               If(
-                    LookUp(
-                        ListaRequisicao,
-                        LookUp(
-                            'Lista de Materiais',
-                            Search('Lista de Materiais', NomeMaterial = numRequisicaoInput.Text),
-                            NomeMaterial
-                        ),
-                        Material
-                    ) = numRequisicaoInput.Text
-                ),
-                Search(
-                    ListaRequisicao, numRequisicaoInput.Text, "NumeroRequisicao"
-                ) 
+            
+                Search(ListaRequisicao, numRequisicaoInput.Text, "NumeroRequisicao", "MaterialForSearching")
             )
         ShowNavigation: =true
         ShowScrollbar: =false
@@ -122,7 +110,7 @@ Dashboard As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Material.Value
+            Text: =Text(ThisItem.Material.Value)
             VerticalAlign: =VerticalAlign.Top
             Width: =128
             X: =31
@@ -219,11 +207,11 @@ Dashboard As screen:
         DisabledColor: =RGBA(255, 255, 255, 1)
         Fill: =If(dark, RGBA(31, 29, 29, 1), White)
         Height: =47
-        HintText: ="Nº requisição"
+        HintText: ="Nº requisição ou Nome Material"
         HoverBorderColor: =RGBA(153, 153, 153, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
-        PaddingLeft: =100
+        PaddingLeft: =80
         RadiusBottomLeft: =40
         RadiusBottomRight: =40
         RadiusTopLeft: =40
@@ -239,7 +227,7 @@ Dashboard As screen:
         Height: =48
         Icon: =Icon.Search
         Width: =40
-        X: =85
+        X: =58
         Y: =192
         ZIndex: =8
 

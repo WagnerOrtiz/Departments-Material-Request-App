@@ -37,6 +37,7 @@
       "Material#Id": "Material Id",
       "Material_x003a_CodigoMaterial": "Material:CodigoMaterial",
       "Material_x003a_CodigoMaterial#Id": "Material:CodigoMaterial Id",
+      "MaterialForSearching": "MaterialForSearching",
       "Modified": "Modified",
       "NomeEntregador": "NomeEntregador",
       "NomeEntregador#Claims": "NomeEntregador Claims",

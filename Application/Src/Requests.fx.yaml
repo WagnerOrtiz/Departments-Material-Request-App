@@ -39,7 +39,8 @@ Requests As screen:
                                             RequisitouPara: RequisitouParaDataCard_2.Selected,
                                             ValorTotal: Value(ValorNumberType_2.Text),
                                             Solicitante:SolicitanteInput_2.Text,
-                                            NumeroRequisicao: Last(ListaRequisicao).ID+1
+                                            NumeroRequisicao: Last(ListaRequisicao).ID+1,
+                                            MaterialForSearching: MaterialDataCard_2.Selected.Value
                                         }
                                     );
                                     Notify("Requisição enviada com sucesso!!",NotificationType.Success,2000);
@@ -59,7 +60,8 @@ Requests As screen:
                                         RequisitouPara: RequisitouParaDataCard_2.Selected,
                                         ValorTotal: Value(ValorNumberType_2.Text),
                                         Solicitante:SolicitanteInput_2.Text,
-                                        NumeroRequisicao: Last(ListaRequisicao).ID+1
+                                        NumeroRequisicao: Last(ListaRequisicao).ID+1,
+                                        MaterialForSearching: MaterialDataCard_2.Selected.Value
                                     }
                                 );
                                 Notify("Requisição enviada com sucesso!!",NotificationType.Success,2000);
