@@ -82,8 +82,8 @@ Requests As screen:
         Size: =21
         Text: ="Requisitar"
         Width: =217
-        X: =77
-        Y: =955
+        X: =212
+        Y: =937
         ZIndex: =5
 
     Icon3_1 As icon.Add:
