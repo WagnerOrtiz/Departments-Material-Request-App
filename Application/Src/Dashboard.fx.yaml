@@ -7,7 +7,7 @@ Dashboard As screen:
         DisabledFill: =RGBA(56, 52, 52, 1)
         Fill: =RGBA(135, 127, 127, 1)
         Height: =100
-        HoverBorderColor: =RGBA(56, 52, 52, 1)
+        HoverBorderColor: =RGBA(128, 128, 128, 1)
         HoverFill: =RGBA(56, 52, 52, 1)
         PressedFill: =RGBA(56, 52, 52, 1)
         RadiusBottomLeft: =0

@@ -1,6 +1,14 @@
 Requests As screen:
     Fill: =If(dark, RGBA(31, 29, 29, 1), White)
-    OnVisible: =Set(varError, "")
+    OnVisible: |-
+        =Set(varError, "");
+        Reset(MaterialDataCard_2);
+        Reset(PrioridadeDataCard_2);
+        Reset(DataRetiradaDataCard_2);
+        Reset(QuantidadeDataCard_2);
+        Reset(ValorDataCard_2);
+        Reset(StatusDataCard_2);
+        Reset(UsoProprioDataCard_2);
 
     RequestButton As button:
         BorderColor: =RGBA(109,49,162,1)
@@ -74,8 +82,8 @@ Requests As screen:
         Size: =21
         Text: ="Requisitar"
         Width: =217
-        X: =212
-        Y: =933
+        X: =77
+        Y: =955
         ZIndex: =5
 
     Icon3_1 As icon.Add:
@@ -93,7 +101,7 @@ Requests As screen:
         DisabledFill: =RGBA(56, 52, 52, 1)
         Fill: =RGBA(135, 127, 127, 1)
         Height: =100
-        HoverBorderColor: =RGBA(56, 52, 52, 1)
+        HoverBorderColor: =RGBA(128, 128, 128, 1)
         HoverFill: =RGBA(56, 52, 52, 1)
         PressedFill: =RGBA(56, 52, 52, 1)
         RadiusBottomLeft: =0
