@@ -164,7 +164,7 @@ Dashboard As screen:
             Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
             FontWeight: =FontWeight.Semibold
             Height: =52
-            OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações"
+            OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
             Size: =15
             Text: =ThisItem.Status
             Width: =198
@@ -175,7 +175,7 @@ Dashboard As screen:
             BorderColor: =RGBA(109, 49, 162, 1)
             Fill: =RGBA(109, 49, 162, 1)
             Height: =0
-            OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações"
+            OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
             Size: =24
             Text: =""
             Visible: =If(ThisItem.IsSelected,true,false)
@@ -195,7 +195,7 @@ Dashboard As screen:
                     "Configurações",
                     Icon.Settings
                 )
-            OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações"
+            OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
             Width: =44
             X: =77
             Y: =18
@@ -237,7 +237,7 @@ Dashboard As screen:
         Color: =RGBA(152, 208, 70, 1)
         Height: =98
         Icon: =Icon.Add
-        OnSelect: =ResetForm(RequestForm);NewForm(RequestForm);Navigate(Requests)
+        OnSelect: =Navigate(Requests)
         Width: =83
         X: =534
         Y: =2

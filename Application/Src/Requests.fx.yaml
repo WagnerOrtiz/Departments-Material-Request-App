@@ -148,6 +148,7 @@ Requests As screen:
             Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
             FontWeight: =FontWeight.Semibold
             Height: =43
+            OnSelect: =Switch(LabelsNavBar_2.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard), "Configurações",Navigate(Configurações))
             Size: =15
             Text: =ThisItem.Status
             Width: =198
@@ -158,7 +159,7 @@ Requests As screen:
             BorderColor: =RGBA(109, 49, 162, 1)
             Fill: =RGBA(109, 49, 162, 1)
             Height: =0
-            OnSelect: =Select(Parent)
+            OnSelect: =Switch(LabelsNavBar_2.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard), "Configurações",Navigate(Configurações))
             Size: =24
             Text: =""
             Visible: =If(ThisItem.IsSelected,true,false)
@@ -178,7 +179,7 @@ Requests As screen:
                     "Configurações",
                     Icon.Settings
                 )
-            OnSelect: =Select(Parent)
+            OnSelect: =Switch(LabelsNavBar_2.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard), "Configurações",Navigate(Configurações))
             Width: =44
             X: =77
             Y: =11
