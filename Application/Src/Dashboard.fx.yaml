@@ -6,7 +6,7 @@ Dashboard As screen:
         DisabledBorderColor: =RGBA(56, 52, 52, 1)
         DisabledFill: =RGBA(56, 52, 52, 1)
         Fill: =RGBA(135, 127, 127, 1)
-        Height: =100
+        Height: =89
         HoverBorderColor: =RGBA(128, 128, 128, 1)
         HoverFill: =RGBA(56, 52, 52, 1)
         PressedFill: =RGBA(56, 52, 52, 1)
@@ -26,17 +26,16 @@ Dashboard As screen:
         OnSelect: =Back()
         Width: =55
         X: =22
-        Y: =23
+        Y: =18
         ZIndex: =2
 
     Label4 As label:
         FontWeight: =FontWeight.Bold
-        Height: =70
+        Height: =90
         Size: =23
         Text: ="Olá, " & LookUp(Usuarios,Email = emailInput.Text, Nome)
         Width: =400
         X: =107
-        Y: =20
         ZIndex: =3
 
     FiltersLabel As gallery.galleryHorizontal:
@@ -45,7 +44,7 @@ Dashboard As screen:
             =Table({Status: "Pendente"},{Status: "Aprovado"},{Status: "Reprovado"},{Status: "Entregue"})
         ShowScrollbar: =false
         TemplateSize: =(Dashboard.Width)/4.2
-        Y: =106
+        Y: =92
         ZIndex: =4
 
         Labels As label:
@@ -75,7 +74,7 @@ Dashboard As screen:
     "MaterialsDashBoard As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 0, 0, 0)
         Default: ={}
-        Height: =777
+        Height: =814
         Items: |-
             =If(
                 numRequisicaoInput.Text = "",
@@ -91,7 +90,7 @@ Dashboard As screen:
         TemplatePadding: =10
         TemplateSize: =193
         WrapCount: =3
-        Y: =245
+        Y: =232
         ZIndex: =5
 
         ImageDashboard As image:
@@ -110,6 +109,7 @@ Dashboard As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =20
             Text: =Text(ThisItem.Material.Value)
             VerticalAlign: =VerticalAlign.Top
             Width: =128
@@ -121,11 +121,11 @@ Dashboard As screen:
             Color: =If(ThisItem.Prioridade.Value = "Alta", Yellow, RGBA(255, 255, 255, 1))
             Height: =25
             OnSelect: =Select(Parent)
-            Size: =15
+            Size: =17
             Text: =ThisItem.Prioridade.Value
             Width: =166
             X: =25
-            Y: =203
+            Y: =207
             ZIndex: =4
 
         Rectangle1 As rectangle:
@@ -142,20 +142,30 @@ Dashboard As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =23
             OnSelect: =Select(Parent)
-            Size: =15
+            Size: =17
             Text: =ThisItem.NumeroRequisicao
             Width: =166
             X: =27
-            Y: =176
+            Y: =181
             ZIndex: =6
 
+        EyeToDetails As image:
+            Height: =38
+            Image: ='icons8-visível-48'
+            OnSelect: =Select(Parent);Navigate(MaterialDetails)
+            Visible: =If(ThisItem.IsSelected, true, false)
+            Width: =28
+            X: =148
+            Y: =192
+            ZIndex: =8
+
     NavBar As gallery.galleryHorizontal:
-        Height: =106
+        Height: =85
         Items: |-
             =Table({Status: "Credenciamento"},{Status: "Dashboard"},{Status: "Configurações"})
         ShowScrollbar: =false
         TemplateSize: =213
-        Y: =1028
+        Y: =1047
         ZIndex: =6
 
         LabelsNavBar As label:
@@ -163,12 +173,12 @@ Dashboard As screen:
             BorderColor: =RGBA(255, 255, 0, 1)
             Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
             FontWeight: =FontWeight.Semibold
-            Height: =52
+            Height: =33
             OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
             Size: =15
             Text: =ThisItem.Status
             Width: =198
-            Y: =43
+            Y: =39
             ZIndex: =1
 
         UnderlineNavBar As button:
@@ -198,7 +208,7 @@ Dashboard As screen:
             OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
             Width: =44
             X: =77
-            Y: =18
+            Y: =12
             ZIndex: =5
 
     numRequisicaoInput As text:
@@ -220,7 +230,7 @@ Dashboard As screen:
         Size: =21
         Width: =560
         X: =48
-        Y: =192
+        Y: =168
         ZIndex: =7
 
     Icon6 As icon.Search:
@@ -229,17 +239,16 @@ Dashboard As screen:
         Icon: =Icon.Search
         Width: =40
         X: =58
-        Y: =192
+        Y: =168
         ZIndex: =8
 
     Icon2 As icon.Add:
         BorderColor: =RGBA(0, 0, 0, 0)
         Color: =RGBA(152, 208, 70, 1)
-        Height: =98
+        Height: =90
         Icon: =Icon.Add
         OnSelect: =Navigate(Requests)
         Width: =83
         X: =534
-        Y: =2
         ZIndex: =10
 

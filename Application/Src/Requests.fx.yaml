@@ -100,7 +100,7 @@ Requests As screen:
         DisabledBorderColor: =RGBA(56, 52, 52, 1)
         DisabledFill: =RGBA(56, 52, 52, 1)
         Fill: =RGBA(135, 127, 127, 1)
-        Height: =100
+        Height: =89
         HoverBorderColor: =RGBA(128, 128, 128, 1)
         HoverFill: =RGBA(56, 52, 52, 1)
         PressedFill: =RGBA(56, 52, 52, 1)
@@ -120,70 +120,18 @@ Requests As screen:
         OnSelect: =Back()
         Width: =55
         X: =22
-        Y: =23
+        Y: =18
         ZIndex: =26
 
     Label4_2 As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Bold
-        Height: =100
+        Height: =89
         Size: =23
         Text: ="Fazer Requisição"
         Width: =267
         X: =197
         ZIndex: =27
-
-    NavBar_2 As gallery.galleryHorizontal:
-        Height: =94
-        Items: |-
-            =Table({Status: "Credenciamento"},{Status: "Dashboard"},{Status: "Configurações"})
-        ShowScrollbar: =false
-        TemplateSize: =213
-        Y: =1039
-        ZIndex: =28
-
-        LabelsNavBar_2 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(255, 255, 0, 1)
-            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
-            FontWeight: =FontWeight.Semibold
-            Height: =43
-            OnSelect: =Switch(LabelsNavBar_2.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard), "Configurações",Navigate(Configurações))
-            Size: =15
-            Text: =ThisItem.Status
-            Width: =198
-            Y: =41
-            ZIndex: =1
-
-        UnderlineNavBar_2 As button:
-            BorderColor: =RGBA(109, 49, 162, 1)
-            Fill: =RGBA(109, 49, 162, 1)
-            Height: =0
-            OnSelect: =Switch(LabelsNavBar_2.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard), "Configurações",Navigate(Configurações))
-            Size: =24
-            Text: =""
-            Visible: =If(ThisItem.IsSelected,true,false)
-            Width: =LabelsNavBar_2.Width
-            ZIndex: =2
-
-        Icon5_2 As icon.Add:
-            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162,1), RGBA(255,255,255,1))
-            Height: =30
-            Icon: |-
-                =Switch(
-                    ThisItem.Status,
-                    "Credenciamento",
-                    Icon.Home,
-                    "Dashboard",
-                    Icon.ListScrollWatchlist,
-                    "Configurações",
-                    Icon.Settings
-                )
-            OnSelect: =Switch(LabelsNavBar_2.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard), "Configurações",Navigate(Configurações))
-            Width: =44
-            X: =77
-            Y: =11
-            ZIndex: =5
 
     Icon1_4 As icon.CheckBadge:
         Color: =RGBA(109, 49, 162, 1)
@@ -192,7 +140,7 @@ Requests As screen:
         OnSelect: =Reset(MaterialDataCard_2); Reset(PrioridadeDataCard_2); Reset(DataRetiradaDataCard_2); Reset(QuantidadeDataCard_2);Reset(ValorDataCard_2);Reset(StatusDataCard_2);Reset(UsoProprioDataCard_2);Reset(RequisitouParaDataCard_2)
         Width: =55
         X: =550
-        Y: =23
+        Y: =18
         ZIndex: =29
 
     MaterialGroup As group:
@@ -647,4 +595,56 @@ Requests As screen:
             X: =88
             Y: =398
             ZIndex: =25
+
+    NavBar_1 As gallery.galleryHorizontal:
+        Height: =87
+        Items: |-
+            =Table({Status: "Credenciamento"},{Status: "Dashboard"},{Status: "Configurações"})
+        ShowScrollbar: =false
+        TemplateSize: =213
+        Y: =1047
+        ZIndex: =31
+
+        LabelsNavBar_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 0, 1)
+            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
+            FontWeight: =FontWeight.Semibold
+            Height: =33
+            OnSelect: =Switch(LabelsNavBar_1.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
+            Size: =15
+            Text: =ThisItem.Status
+            Width: =198
+            Y: =39
+            ZIndex: =1
+
+        UnderlineNavBar_1 As button:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            Fill: =RGBA(109, 49, 162, 1)
+            Height: =0
+            OnSelect: =Switch(LabelsNavBar_1.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
+            Size: =24
+            Text: =""
+            Visible: =If(ThisItem.IsSelected,true,false)
+            Width: =LabelsNavBar_1.Width
+            ZIndex: =2
+
+        Icon5_1 As icon.Add:
+            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162,1), RGBA(255,255,255,1))
+            Height: =30
+            Icon: |-
+                =Switch(
+                    ThisItem.Status,
+                    "Credenciamento",
+                    Icon.Home,
+                    "Dashboard",
+                    Icon.ListScrollWatchlist,
+                    "Configurações",
+                    Icon.Settings
+                )
+            OnSelect: =Switch(LabelsNavBar_1.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
+            Width: =44
+            X: =77
+            Y: =12
+            ZIndex: =5
 

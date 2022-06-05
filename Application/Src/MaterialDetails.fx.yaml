@@ -1,0 +1,10 @@
+MaterialDetails As screen:
+    Fill: =If(dark, RGBA(31, 29, 29, 1), White)
+    OnVisible: =
+
+    FormViewer2 As formViewer:
+        DataSource: =MaterialsDashBoard.Selected
+        Width: =640
+        Y: =40
+        ZIndex: =1
+
