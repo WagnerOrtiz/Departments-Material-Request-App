@@ -3,24 +3,130 @@ MaterialDetails As screen:
     OnVisible: =
 
     Gallery4 As gallery.galleryVertical:
-        Height: =634
+        Height: =856
         Items: =MaterialsDashBoard.Selected
         Layout: =Layout.Vertical
         ShowScrollbar: =false
-        TemplateSize: =629
-        Y: =85
+        TemplateSize: =851
+        Y: =167
         ZIndex: =1
 
-        Label3 As label:
+        ViewMaterial As label:
             Color: =RGBA(255, 255, 255, 1)
             Height: =70
             OnSelect: =Select(Parent)
             Size: =21
             Text: =ThisItem.Material.Value
-            Width: =560
-            X: =40
-            Y: =244
+            Width: =330
+            X: =222
+            Y: =205
             ZIndex: =1
+
+        ViewStatus As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Status
+            Width: =330
+            X: =222
+            Y: =273
+            ZIndex: =2
+
+        ViewQuantidade As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Quantidade
+            Width: =330
+            X: =222
+            Y: =333
+            ZIndex: =3
+
+        ViewDataRetirada As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =66
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.DataPrevistaRetirada
+            Width: =330
+            X: =222
+            Y: =415
+            ZIndex: =4
+
+        ViewRequisitouPara As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.RequisitouPara.DisplayName
+            Width: =330
+            X: =222
+            Y: =495
+            ZIndex: =5
+
+        ViewPrioridade As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Prioridade.Value
+            Width: =330
+            X: =222
+            Y: =481
+            ZIndex: =6
+
+        ViewValorTotal As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.ValorTotal
+            Width: =330
+            X: =222
+            Y: =130
+            ZIndex: =7
+
+        ViewCreated As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Created
+            Width: =330
+            X: =222
+            Y: =536
+            ZIndex: =8
+
+        ViewCreatedBy As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Created By'.DisplayName
+            Width: =330
+            X: =222
+            Y: =621
+            ZIndex: =9
+
+        ViewNumRequisicao As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.NumeroRequisicao
+            Width: =330
+            X: =222
+            Y: =691
+            ZIndex: =10
+
+        Image6 As image:
+            Height: =190
+            Image: =ThisItem.ImageDashboard
+            OnSelect: =Select(Parent)
+            Width: =190
+            ZIndex: =11
 
     HeaderComponent_1 As HeaderComponent:
         Height: =88
