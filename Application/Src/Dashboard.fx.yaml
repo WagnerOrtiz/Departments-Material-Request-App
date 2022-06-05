@@ -19,25 +19,6 @@ Dashboard As screen:
         Width: =640
         ZIndex: =1
 
-    Icon1_1 As icon.CheckBadge:
-        Color: =RGBA(109, 49, 162, 1)
-        Height: =55
-        Icon: =Icon.ChevronLeft
-        OnSelect: =Back()
-        Width: =55
-        X: =22
-        Y: =18
-        ZIndex: =2
-
-    Label4 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =90
-        Size: =23
-        Text: ="Olá, " & LookUp(Usuarios,Email = emailInput.Text, Nome)
-        Width: =400
-        X: =107
-        ZIndex: =3
-
     FiltersLabel As gallery.galleryHorizontal:
         Height: =58
         Items: |-
@@ -152,7 +133,7 @@ Dashboard As screen:
         EyeToDetails As image:
             Height: =38
             Image: ='icons8-visível-48'
-            OnSelect: =Select(Parent); ViewForm(FormViewer3); Navigate(MaterialDetails)
+            OnSelect: =Select(Parent); Navigate(MaterialDetails)
             Visible: =If(ThisItem.IsSelected, true, false)
             Width: =28
             X: =148
@@ -242,13 +223,39 @@ Dashboard As screen:
         Y: =168
         ZIndex: =8
 
-    Icon2 As icon.Add:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        Color: =RGBA(152, 208, 70, 1)
-        Height: =90
-        Icon: =Icon.Add
-        OnSelect: =Navigate(Requests)
-        Width: =83
-        X: =534
-        ZIndex: =10
+    Header As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =11
+
+        Icon1_1 As icon.CheckBadge:
+            Color: =RGBA(109, 49, 162, 1)
+            Height: =55
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Back()
+            Width: =55
+            X: =22
+            Y: =18
+            ZIndex: =2
+
+        Label4 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =90
+            Size: =23
+            Text: ="Olá, " & LookUp(Usuarios,Email = emailInput.Text, Nome)
+            Width: =400
+            X: =107
+            ZIndex: =3
+
+        Icon2 As icon.Add:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(152, 208, 70, 1)
+            Height: =90
+            Icon: =Icon.Add
+            OnSelect: =Navigate(Requests)
+            Width: =83
+            X: =534
+            ZIndex: =10
 

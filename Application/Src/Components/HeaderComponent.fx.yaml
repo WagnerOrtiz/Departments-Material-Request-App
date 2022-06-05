@@ -1,0 +1,55 @@
+HeaderComponent As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    backGround_3 As button:
+        DisabledBorderColor: =RGBA(56, 52, 52, 1)
+        DisabledFill: =RGBA(56, 52, 52, 1)
+        Fill: =RGBA(135, 127, 127, 1)
+        Height: =89
+        HoverBorderColor: =RGBA(128, 128, 128, 1)
+        HoverFill: =RGBA(56, 52, 52, 1)
+        PressedFill: =RGBA(56, 52, 52, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: =""
+        Width: =640
+        Y: =2
+        ZIndex: =1
+
+    Icon1_2 As icon.CheckBadge:
+        Color: =RGBA(109, 49, 162, 1)
+        Height: =55
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        Width: =55
+        X: =22
+        Y: =18
+        ZIndex: =2
+
+    Label4_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =90
+        Size: =23
+        Text: =
+        Width: =400
+        X: =107
+        ZIndex: =3
+
+    Icon2_1 As icon.Add:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(152, 208, 70, 1)
+        Height: =90
+        Icon: =Icon.Add
+        OnSelect: =
+        Width: =83
+        X: =534
+        ZIndex: =4
+
