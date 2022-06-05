@@ -152,7 +152,7 @@ Dashboard As screen:
         EyeToDetails As image:
             Height: =38
             Image: ='icons8-visível-48'
-            OnSelect: =Select(Parent);Navigate(MaterialDetails)
+            OnSelect: =Select(Parent); ViewForm(FormViewer3); Navigate(MaterialDetails)
             Visible: =If(ThisItem.IsSelected, true, false)
             Width: =28
             X: =148
