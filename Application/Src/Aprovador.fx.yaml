@@ -77,9 +77,10 @@ Aprovador As screen:
     FormApproval_1 As form:
         DataSource: =ListaRequisicao
         DefaultMode: =FormMode.View
+        Height: =535
         Item: =MaterialsDashBoard.Selected
         Width: =640
-        Y: =89
+        Y: =53
         ZIndex: =32
 
         ImageApprove As typedDataCard.textualEditCard:
@@ -103,7 +104,7 @@ Aprovador As screen:
                 Image: =MaterialsDashBoard.Selected.ImageDashboard
                 Width: =151
                 X: =235
-                Y: =39
+                Y: =69
                 ZIndex: =5
 
         Prioridade_DataCard2 As typedDataCard.comboBoxEditCard:
@@ -471,10 +472,11 @@ Aprovador As screen:
 
     FormApproval_2 As form:
         DataSource: =ListaRequisicao
-        Height: =447
+        Height: =479
         Item: =MaterialsDashBoard.Selected
+        OnSuccess: =Notify("Resposta processada com sucesso",NotificationType.Success,2000)
         Width: =640
-        Y: =599
+        Y: =567
         ZIndex: =33
 
         Comentarios_DataCard2 As typedDataCard.textualEditCard:
@@ -512,7 +514,7 @@ Aprovador As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =287
+                Height: =215
                 HoverBorderColor: =RGBA(109, 49, 162, 1)
                 MaxLength: =Parent.MaxLength
                 Mode: =TextMode.MultiLine
@@ -617,6 +619,7 @@ Aprovador As screen:
                 ChevronBackground: =RGBA(109, 49, 162, 1)
                 ChevronHoverBackground: =RGBA(109, 49, 162, 1)
                 Color: =RGBA(109, 49, 162, 1)
+                Default: =MaterialsDashBoard.Selected.Status
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =47
                 Items: =["Pendente", "Aprovado", "Reprovado"]
@@ -627,13 +630,33 @@ Aprovador As screen:
                 X: =268
                 ZIndex: =5
 
-    Label2 As label:
-        Color: =RGBA(255, 255, 0, 1)
-        Height: =70
+    RequestButton_1 As button:
+        BorderColor: =RGBA(109,49,162,1)
+        Fill: =RGBA(109, 49, 162, 1)
+        Height: =46
+        HoverFill: =ColorFade(RGBA(109, 49, 162, 1), -20%)
+        OnSelect: |-
+            =If(
+                DataCardValue19.Selected.Value = "Pendente", 
+                Set(varError, "Atentar ao Status"),
+                Set(varError,"");
+                SubmitForm(FormApproval_2);
+                Navigate(Dashboard)
+            )
         Size: =21
-        Text: ="Text"
-        Width: =560
-        X: =22
-        Y: =955
+        Text: ="Enviar"
+        Width: =217
+        X: =211
+        Y: =944
         ZIndex: =34
+
+    Label3 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 0, 0, 1)
+        Height: =43
+        Size: =18
+        Text: =varError
+        Width: =640
+        Y: =901
+        ZIndex: =35
 

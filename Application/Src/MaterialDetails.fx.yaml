@@ -3,12 +3,12 @@ MaterialDetails As screen:
     OnVisible: =
 
     Gallery4 As gallery.galleryVertical:
-        Height: =944
+        Height: =970
         Items: =MaterialsDashBoard.Selected
         Layout: =Layout.Vertical
         ShowScrollbar: =false
-        TemplateSize: =939
-        Y: =79
+        TemplateSize: =935
+        Y: =81
         ZIndex: =1
 
         ViewMaterial As label:
@@ -19,7 +19,7 @@ MaterialDetails As screen:
             Text: =ThisItem.Material.Value
             Width: =310
             X: =320
-            Y: =287
+            Y: =219
             ZIndex: =1
 
         ViewStatus As label:
@@ -30,7 +30,7 @@ MaterialDetails As screen:
             Text: =ThisItem.Status
             Width: =310
             X: =320
-            Y: =469
+            Y: =401
             ZIndex: =2
 
         ViewQuantidade As label:
@@ -41,7 +41,7 @@ MaterialDetails As screen:
             Text: =ThisItem.Quantidade
             Width: =310
             X: =320
-            Y: =531
+            Y: =463
             ZIndex: =3
 
         ViewDataRetirada As label:
@@ -52,19 +52,23 @@ MaterialDetails As screen:
             Text: =ThisItem.DataPrevistaRetirada
             Width: =310
             X: =320
-            Y: =598
+            Y: =530
             ZIndex: =4
 
         ViewRequisitouPara As label:
-            BorderColor: =RGBA(255, 255, 0, 1)
+            BorderColor: =RGBA(109, 49, 162, 1)
+            BorderThickness: =1
             Color: =RGBA(109, 49, 162, 1)
-            Height: =70
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =1
+            Height: =115
             OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
             Size: =21
-            Text: =ThisItem.RequisitouPara.DisplayName
-            Width: =310
+            Text: =ThisItem.Comentarios
+            Width: =298
             X: =320
-            Y: =865
+            Y: =810
             ZIndex: =5
 
         ViewPrioridade As label:
@@ -75,7 +79,7 @@ MaterialDetails As screen:
             Text: =ThisItem.Prioridade.Value
             Width: =310
             X: =320
-            Y: =408
+            Y: =340
             ZIndex: =6
 
         ViewValorTotal As label:
@@ -86,7 +90,7 @@ MaterialDetails As screen:
             Text: ="R$ " & ThisItem.ValorTotal
             Width: =310
             X: =320
-            Y: =660
+            Y: =592
             ZIndex: =7
 
         ViewCreated As label:
@@ -97,7 +101,7 @@ MaterialDetails As screen:
             Text: =ThisItem.Created
             Width: =310
             X: =320
-            Y: =730
+            Y: =662
             ZIndex: =8
 
         ViewCreatedBy As label:
@@ -108,7 +112,7 @@ MaterialDetails As screen:
             Text: =ThisItem.'Created By'.DisplayName
             Width: =310
             X: =320
-            Y: =796
+            Y: =728
             ZIndex: =9
 
         ViewNumRequisicao As label:
@@ -119,20 +123,20 @@ MaterialDetails As screen:
             Text: =ThisItem.NumeroRequisicao
             Width: =310
             X: =320
-            Y: =350
+            Y: =282
             ZIndex: =10
 
         Image6 As image:
-            Height: =191
+            Height: =152
             Image: =ThisItem.ImageDashboard
             OnSelect: =Select(Parent)
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
             RadiusTopLeft: =5
             RadiusTopRight: =5
-            Width: =200
-            X: =215
-            Y: =69
+            Width: =159
+            X: =236
+            Y: =27
             ZIndex: =11
 
     DetailsValorTotal As label:
@@ -144,7 +148,7 @@ MaterialDetails As screen:
             ="Valor total: "
         Width: =250
         X: =60
-        Y: =766
+        Y: =698
         ZIndex: =2
 
     DetailsRequisitadoEm As label:
@@ -156,7 +160,7 @@ MaterialDetails As screen:
             ="Requisitado em:"
         Width: =250
         X: =60
-        Y: =832
+        Y: =764
         ZIndex: =3
 
     DetailsStatus As label:
@@ -168,7 +172,7 @@ MaterialDetails As screen:
             ="Status: "
         Width: =250
         X: =60
-        Y: =573
+        Y: =505
         ZIndex: =4
 
     DetailsRequisitadoPor As label:
@@ -180,7 +184,7 @@ MaterialDetails As screen:
             ="Requisitado por: "
         Width: =250
         X: =60
-        Y: =901
+        Y: =833
         ZIndex: =5
 
     DetailsNumRequisicao As label:
@@ -192,7 +196,7 @@ MaterialDetails As screen:
             ="Nº Requisição: "
         Width: =250
         X: =60
-        Y: =454
+        Y: =386
         ZIndex: =6
 
     DetailsPrioridade As label:
@@ -204,7 +208,7 @@ MaterialDetails As screen:
             ="Prioridade: "
         Width: =250
         X: =60
-        Y: =513
+        Y: =445
         ZIndex: =7
 
     DetailsQuantidade As label:
@@ -216,7 +220,7 @@ MaterialDetails As screen:
             ="Quantidade:"
         Width: =250
         X: =60
-        Y: =634
+        Y: =566
         ZIndex: =8
 
     DetailsDataRetirada As label:
@@ -228,7 +232,7 @@ MaterialDetails As screen:
             ="Data Retirada:"
         Width: =250
         X: =60
-        Y: =700
+        Y: =632
         ZIndex: =9
 
     DetailsMaterial As label:
@@ -240,7 +244,7 @@ MaterialDetails As screen:
             ="Material: "
         Width: =250
         X: =60
-        Y: =392
+        Y: =324
         ZIndex: =10
 
     DetailsRequisitadoPor_1 As label:
@@ -249,10 +253,10 @@ MaterialDetails As screen:
         Height: =30
         Size: =21
         Text: |-
-            ="Requisitado para: "
+            ="Comentário:"
         Width: =250
         X: =60
-        Y: =968
+        Y: =897
         ZIndex: =11
 
     Label5 As label:
