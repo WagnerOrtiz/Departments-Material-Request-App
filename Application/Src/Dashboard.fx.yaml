@@ -166,12 +166,12 @@ Dashboard As screen:
             BorderColor: =RGBA(109, 49, 162, 1)
             BorderThickness: =0
             Color: =
-            Fill: =If(Icon5.Color = RGBA(109, 49, 162, 1), RGBA(109, 49, 162, 1), White)
-            Height: =0
+            Fill: =If(ScreenName.Text = LabelsNavBar.Text,RGBA(109, 49, 162, 1), White)
+            Height: =4
             OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
             Size: =24
             Text: =""
-            Visible: =If(Icon5.Color = RGBA(109, 49, 162, 1),true,false)
+            Visible: =If(ThisItem.Status = ScreenName.Text, true, false)
             Width: =LabelsNavBar.Width
             ZIndex: =2
 
@@ -226,10 +226,11 @@ Dashboard As screen:
         ZIndex: =8
 
     ScreenName As label:
-        Color: =RGBA(255, 255, 0, 1)
+        Color: =RGBA(0, 0, 0, 0)
         Height: =88
         Size: =21
         Text: ="Dashboard"
+        Visible: =false
         Width: =202
         X: =438
         Y: =216
