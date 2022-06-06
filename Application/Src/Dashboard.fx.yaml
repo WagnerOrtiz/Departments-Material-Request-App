@@ -152,7 +152,7 @@ Dashboard As screen:
         LabelsNavBar As label:
             Align: =Align.Center
             BorderColor: =RGBA(255, 255, 0, 1)
-            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
+            Color: =If(ScreenName.Text = LabelsNavBar.Text,RGBA(109, 49, 162, 1), White)
             FontWeight: =FontWeight.Semibold
             Height: =33
             OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
@@ -164,17 +164,19 @@ Dashboard As screen:
 
         UnderlineNavBar As button:
             BorderColor: =RGBA(109, 49, 162, 1)
-            Fill: =RGBA(109, 49, 162, 1)
+            BorderThickness: =0
+            Color: =
+            Fill: =If(Icon5.Color = RGBA(109, 49, 162, 1), RGBA(109, 49, 162, 1), White)
             Height: =0
             OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
             Size: =24
             Text: =""
-            Visible: =If(ThisItem.IsSelected,true,false)
+            Visible: =If(Icon5.Color = RGBA(109, 49, 162, 1),true,false)
             Width: =LabelsNavBar.Width
             ZIndex: =2
 
         Icon5 As icon.Add:
-            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162,1), RGBA(255,255,255,1))
+            Color: =If(ScreenName.Text = LabelsNavBar.Text,RGBA(109, 49, 162, 1), White)
             Height: =30
             Icon: |-
                 =Switch(
@@ -222,6 +224,16 @@ Dashboard As screen:
         X: =58
         Y: =168
         ZIndex: =8
+
+    ScreenName As label:
+        Color: =RGBA(255, 255, 0, 1)
+        Height: =88
+        Size: =21
+        Text: ="Dashboard"
+        Width: =202
+        X: =438
+        Y: =216
+        ZIndex: =11
 
     Header As group:
         Height: =5
