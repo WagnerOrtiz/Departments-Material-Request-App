@@ -77,7 +77,6 @@ Aprovador As screen:
     FormApproval_1 As form:
         DataSource: =ListaRequisicao
         DefaultMode: =FormMode.View
-        Height: =506
         Item: =MaterialsDashBoard.Selected
         Width: =640
         Y: =89
@@ -472,10 +471,10 @@ Aprovador As screen:
 
     FormApproval_2 As form:
         DataSource: =ListaRequisicao
-        Height: =442
+        Height: =447
         Item: =MaterialsDashBoard.Selected
         Width: =640
-        Y: =605
+        Y: =599
         ZIndex: =33
 
         Comentarios_DataCard2 As typedDataCard.textualEditCard:
@@ -502,7 +501,7 @@ Aprovador As screen:
                 Text: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
-                X: =30
+                X: =46
                 Y: =10 + (DataCardValue26.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
@@ -513,7 +512,7 @@ Aprovador As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =305
+                Height: =287
                 HoverBorderColor: =RGBA(109, 49, 162, 1)
                 MaxLength: =Parent.MaxLength
                 Mode: =TextMode.MultiLine
@@ -530,7 +529,7 @@ Aprovador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =(Parent.Width - 60) * 0.6
                 X: =267
-                Y: =10
+                Y: =27
                 ZIndex: =2
 
             ErrorMessage26 As label:
@@ -578,7 +577,7 @@ Aprovador As screen:
 
             DataCardKey19 As label:
                 Color: =RGBA(255, 255, 255, 1)
-                Height: =47
+                Height: =36
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =220
