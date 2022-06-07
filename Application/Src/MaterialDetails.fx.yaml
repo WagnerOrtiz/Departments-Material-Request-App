@@ -140,7 +140,7 @@ MaterialDetails As screen:
             ZIndex: =11
 
     DetailsValorTotal As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =If(dark, White, Black)
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =21
@@ -152,7 +152,7 @@ MaterialDetails As screen:
         ZIndex: =2
 
     DetailsRequisitadoEm As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =If(dark, White, Black)
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =21
@@ -164,7 +164,7 @@ MaterialDetails As screen:
         ZIndex: =3
 
     DetailsStatus As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =If(dark, White, Black)
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =21
@@ -176,7 +176,7 @@ MaterialDetails As screen:
         ZIndex: =4
 
     DetailsRequisitadoPor As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =If(dark, White, Black)
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =21
@@ -188,7 +188,7 @@ MaterialDetails As screen:
         ZIndex: =5
 
     DetailsNumRequisicao As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =If(dark, White, Black)
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =21
@@ -200,7 +200,7 @@ MaterialDetails As screen:
         ZIndex: =6
 
     DetailsPrioridade As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =If(dark, White, Black)
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =21
@@ -212,7 +212,7 @@ MaterialDetails As screen:
         ZIndex: =7
 
     DetailsQuantidade As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =If(dark, White, Black)
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =21
@@ -224,7 +224,7 @@ MaterialDetails As screen:
         ZIndex: =8
 
     DetailsDataRetirada As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =If(dark, White, Black)
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =21
@@ -236,7 +236,7 @@ MaterialDetails As screen:
         ZIndex: =9
 
     DetailsMaterial As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =If(dark, White, Black)
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =21
@@ -248,7 +248,7 @@ MaterialDetails As screen:
         ZIndex: =10
 
     DetailsRequisitadoPor_1 As label:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =If(dark, White, Black)
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =21

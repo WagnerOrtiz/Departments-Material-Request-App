@@ -115,7 +115,7 @@ Requests As screen:
 
         DataCardKeyLabel As label:
             AutoHeight: =true
-            Color: =RGBA(255, 255, 255, 1)
+            Color: =If(dark, White, Black)
             Height: =48
             Size: =21
             Text: ="Material"
@@ -165,7 +165,7 @@ Requests As screen:
 
         DataCardKey3_2 As label:
             AutoHeight: =true
-            Color: =RGBA(255, 255, 255, 1)
+            Color: =If(dark, White, Black)
             DisabledColor: =RGBA(255, 255, 255, 1)
             Height: =48
             Size: =21
@@ -247,7 +247,7 @@ Requests As screen:
 
         DataCardKey8_2 As label:
             AutoHeight: =true
-            Color: =RGBA(255, 255, 255, 1)
+            Color: =If(dark, White, Black)
             Height: =48
             Size: =21
             Text: ="Quantidade"
@@ -260,7 +260,7 @@ Requests As screen:
         QuantidadeDataCard_2 As text:
             BorderColor: =RGBA(109, 49, 162, 1)
             BorderThickness: =1
-            Color: =RGBA(109,49,162,1)
+            Color: =If(dark, White, Black)
             Default: =
             DelayOutput: =true
             DisplayMode: =
@@ -288,7 +288,7 @@ Requests As screen:
         ZIndex: =29
 
         DataCardKey2_2 As label:
-            Color: =RGBA(255, 255, 255, 1)
+            Color: =If(dark, White, Black)
             Height: =39
             Size: =21
             Text: ="Status"
@@ -301,6 +301,7 @@ Requests As screen:
         StatusDataCard_2 As text:
             BorderColor: =RGBA(109, 49, 162, 1)
             BorderThickness: =0
+            Color: =If(dark, White, Black)
             Default: |-
                 =If(
                     ValorDataCard_2.HintText = "R$ 0",
@@ -338,10 +339,12 @@ Requests As screen:
 
         DataCardKey4_2 As label:
             AutoHeight: =true
-            Color: =RGBA(255, 255, 255, 1)
+            Color: |
+                =If(dark, White, Black)
             Height: =48
             Size: =21
             Text: ="Uso próprio"
+            Tooltip: =
             Width: =(Parent.Width - 60) * 0.4
             Wrap: =false
             X: =31
@@ -350,6 +353,8 @@ Requests As screen:
 
         UsoProprioDataCard_2 As toggleSwitch:
             BorderColor: =
+            Color: |
+                =If(dark, White, Black)
             Default: =
             DisabledBorderColor: =RGBA(255, 255, 255, 1)
             DisplayMode: =
@@ -367,10 +372,12 @@ Requests As screen:
             ZIndex: =15
 
         SimOuNao_Label_2 As label:
-            Color: =DimGrey
+            Color: |
+                =If(dark, White, Black)
             Height: =34
             Size: =21
             Text: =If(UsoProprioDataCard_2.Value = true, "Sim", "Não")
+            Tooltip: =
             Width: =69
             X: =355
             Y: =708
@@ -385,7 +392,8 @@ Requests As screen:
 
         DataCardKey7_2 As label:
             AutoHeight: =true
-            Color: =RGBA(255, 255, 255, 1)
+            Color: |
+                =If(dark, White, Black)
             Height: =48
             Size: =21
             Text: ="Valor total"
@@ -398,6 +406,8 @@ Requests As screen:
         ValorDataCard_2 As text:
             BorderColor: =RGBA(109, 49, 162, 1)
             BorderThickness: =0
+            Color: |
+                =If(dark, White, Black)
             Default: =
             DelayOutput: =true
             DisabledFill: =RGBA(0, 0, 0, 0)
@@ -433,7 +443,8 @@ Requests As screen:
             ZIndex: =12
 
         ValorNumberType_2 As label:
-            Color: =RGBA(255, 255, 0, 1)
+            Color: |
+                =If(dark, White, Black)
             Height: =30
             Size: =15
             Text: =LookUp('Lista de Materiais',NomeMaterial = MaterialDataCard_2.Selected.Value, Valor) * QuantidadeDataCard_2
@@ -452,7 +463,8 @@ Requests As screen:
 
         DataCardKey18_2 As label:
             AutoHeight: =true
-            Color: =White
+            Color: |
+                =If(dark, White, Black)
             Height: =48
             Size: =21
             Text: ="Requisitou para"
@@ -518,7 +530,8 @@ Requests As screen:
 
         DataCardKey6_2 As label:
             AutoHeight: =true
-            Color: =RGBA(255, 255, 255, 1)
+            Color: |
+                =If(dark, White, Black)
             Height: =48
             Size: =21
             Text: ="Data retirada"
@@ -531,7 +544,8 @@ Requests As screen:
         DataRetiradaDataCard_2 As datepicker:
             BorderColor: =RGBA(109, 49, 162, 1)
             BorderThickness: =1
-            Color: =RGBA(255, 255, 255, 1)
+            Color: |
+                =If(dark, White, Black)
             DisplayMode: =
             EndYear: =Year(Today())+100
             Fill: =If(dark, RGBA(31, 29, 29, 1), White)
@@ -549,7 +563,8 @@ Requests As screen:
             ZIndex: =19
 
         DataDifference As label:
-            Color: =RGBA(152, 208, 70, 1)
+            Color: |
+                =If(dark, White, Black)
             Height: =62
             Size: =21
             Text: =DateDiff(Today(),DataRetiradaDataCard_2.SelectedDate,Days)
@@ -571,7 +586,8 @@ Requests As screen:
         LabelsNavBar_1 As label:
             Align: =Align.Center
             BorderColor: =RGBA(255, 255, 0, 1)
-            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
+            Color: |
+                =If(dark, White, Black)
             FontWeight: =FontWeight.Semibold
             Height: =33
             OnSelect: =Switch(LabelsNavBar_1.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
@@ -593,7 +609,8 @@ Requests As screen:
             ZIndex: =2
 
         Icon5_1 As icon.Add:
-            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162,1), RGBA(255,255,255,1))
+            Color: |
+                =If(dark, White, Black)
             Height: =30
             Icon: |-
                 =Switch(

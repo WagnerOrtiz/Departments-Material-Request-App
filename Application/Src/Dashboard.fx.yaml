@@ -31,7 +31,7 @@ Dashboard As screen:
         Labels As label:
             Align: =Align.Center
             BorderColor: =RGBA(255, 255, 0, 1)
-            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), White)
+            Color: =If(ThisItem.IsSelected, RGBA(109, 49, 162, 1), If(dark, White, Black))
             FontWeight: =FontWeight.Semibold
             Height: =44
             Size: =17
@@ -83,7 +83,7 @@ Dashboard As screen:
             ZIndex: =1
 
         MaterialDashboard As label:
-            Color: =RGBA(255, 255, 255, 1)
+            Color: =If(dark, White, Black)
             Height: =29
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -99,7 +99,16 @@ Dashboard As screen:
             ZIndex: =3
 
         PrioridadeDashboard As label:
-            Color: =If(ThisItem.Prioridade.Value = "Alta", Yellow, RGBA(255, 255, 255, 1))
+            Color: |-
+                =If(
+                    ThisItem.Prioridade.Value = "Alta",
+                    If(
+                        dark,
+                        Yellow,
+                        Red
+                    ),
+                    Black
+                )
             Height: =25
             OnSelect: =Select(Parent)
             Size: =17
@@ -120,7 +129,7 @@ Dashboard As screen:
             ZIndex: =5
 
         NumReqDashboard As label:
-            Color: =RGBA(255, 255, 255, 1)
+            Color: =If(dark, White, Black)
             Height: =23
             OnSelect: =Select(Parent)
             Size: =17
@@ -152,7 +161,7 @@ Dashboard As screen:
         LabelsNavBar As label:
             Align: =Align.Center
             BorderColor: =RGBA(255, 255, 0, 1)
-            Color: =If(ScreenName.Text = LabelsNavBar.Text,RGBA(109, 49, 162, 1), White)
+            Color: =If(ScreenName.Text = LabelsNavBar.Text,RGBA(109, 49, 162, 1), If(dark, White, Black))
             FontWeight: =FontWeight.Semibold
             Height: =33
             OnSelect: =Switch(LabelsNavBar.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
@@ -176,7 +185,7 @@ Dashboard As screen:
             ZIndex: =2
 
         Icon5 As icon.Add:
-            Color: =If(ScreenName.Text = LabelsNavBar.Text,RGBA(109, 49, 162, 1), White)
+            Color: =If(ScreenName.Text = LabelsNavBar.Text,RGBA(109, 49, 162, 1), If(dark, White, Black))
             Height: =30
             Icon: |-
                 =Switch(
