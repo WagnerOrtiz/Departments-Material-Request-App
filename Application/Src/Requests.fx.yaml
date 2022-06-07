@@ -577,7 +577,7 @@ Requests As screen:
     NavBar_1 As gallery.galleryHorizontal:
         Height: =87
         Items: |-
-            =Table({Status: "Credenciamento"},{Status: "Dashboard"},{Status: "Configurações"})
+            =Table({Status: "Nova Requisição"},{Status: "Dashboard"},{Status: "Configurações"})
         ShowScrollbar: =false
         TemplateSize: =213
         Y: =1047
@@ -587,7 +587,7 @@ Requests As screen:
             Align: =Align.Center
             BorderColor: =RGBA(255, 255, 0, 1)
             Color: |
-                =If(dark, White, Black)
+                =If(ScreenName2.Text = LabelsNavBar_1.Text,RGBA(109, 49, 162, 1), If(dark, White, Black))
             FontWeight: =FontWeight.Semibold
             Height: =33
             OnSelect: =Switch(LabelsNavBar_1.Text,"Credenciamento",Navigate(CreateLoginScreen),"Dashboard",Navigate(Dashboard),"Configurações", Navigate(Configurações))
@@ -610,12 +610,12 @@ Requests As screen:
 
         Icon5_1 As icon.Add:
             Color: |
-                =If(dark, White, Black)
+                =If(ScreenName2.Text = LabelsNavBar_1.Text,RGBA(109, 49, 162, 1), If(dark, White, Black))
             Height: =30
             Icon: |-
                 =Switch(
                     ThisItem.Status,
-                    "Credenciamento",
+                    "Nova Requisição",
                     Icon.Home,
                     "Dashboard",
                     Icon.ListScrollWatchlist,
@@ -626,7 +626,17 @@ Requests As screen:
             Width: =44
             X: =77
             Y: =12
-            ZIndex: =5
+            ZIndex: =3
+
+    ScreenName2 As label:
+        Height: =48
+        Size: =15
+        Text: ="Nova Requisição"
+        Visible: =false
+        Width: =184
+        X: =13
+        Y: =885
+        ZIndex: =32
 
     Header2 As group:
         Height: =5
